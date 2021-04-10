@@ -2,6 +2,7 @@ const profileModel = require("../models/profileSchema");
 module.exports = {
   name: "give",
   permissions: ["ADMINISTRATOR"],
+  cooldown: 10,
   description: "Gives bars to a member!",
   async execute(client, message, args, Discord, profileData) {
     if (!args.length) return message.channel.send("You need to mention a player to give them<:HPbar:830500268089147424>!");
