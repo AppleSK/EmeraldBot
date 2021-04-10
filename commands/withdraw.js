@@ -1,6 +1,7 @@
 const profileModel = require("../models/profileSchema");
 module.exports = {
   name: "withdraw",
+  permissions: [],
   cooldown: 10,
   description: "Withdraw bars from your bank!",
   async execute(client, message, args, Discord, profileData) {
