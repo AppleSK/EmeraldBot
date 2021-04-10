@@ -5,7 +5,7 @@ module.exports = {
   cooldown: 10,
   description: "Gives bars to a member!",
   async execute(client, message, args, Discord, profileData) {
-    if (!args.length) return message.channel.send("You need to mention a player to give them<:HPbar:830500268089147424>!");
+    if (!args.length) return message.channel.send("You need to mention someone to give them<:HPbar:830500268089147424>!");
     const amount = args[1];
     const target = message.mentions.users.first();
     if (!target) return message.channel.send("That user does not exist!");
