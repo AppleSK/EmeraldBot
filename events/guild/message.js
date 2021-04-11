@@ -29,7 +29,7 @@ module.exports = async (Discord, client, message) => {
     const command = client.commands.get(cmd);
 
     const Permserror = new Discord.MessageEmbed() 
-        .setColor('326E88')
+        .setColor('207144')
         .setTitle('Insufficient permissions!')
         .setDescription('To perform this command you need to have permissions for it!')
 
