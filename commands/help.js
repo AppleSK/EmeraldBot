@@ -9,12 +9,13 @@ module.exports = {
         .setTitle('Help')
         .setDescription('Every command and what it does!')
         .addFields(
-        {name: '+bal', value: 'Tells you how much you have in your wallet and how much you have in the bank!'},
-        {name: '+beg', value: 'Beg for some bars and you will get a random amount!'},
-        {name: '+withdraw', value: 'Withdraw bars from your bank!'},
-        {name: '+deposit', value: 'Deposit bars into your bank!'},
-        {name: '+give', value: 'A command only for admins, gives a member any amount of bars!'},
-        {name: '+search', value: 'Search a location for some bars!'},
+        {name: 'bal', value: 'Tells you how much you have in your wallet and how much you have in the bank!'},
+        {name: 'beg', value: 'Beg for some bars and you will get a random amount!'},
+        {name: 'withdraw', value: 'Withdraw bars from your bank!'},
+        {name: 'deposit', value: 'Deposit bars into your bank!'},
+        {name: 'give', value: 'A command only for admins, gives a member any amount of bars!'},
+        {name: 'remove', value: 'A command only for admins, removes any amount of bars from a member. (You can go into negative numbers!)'},
+        {name: 'search', value: 'Search a location for some bars!'},
         )
 
         message.channel.send(helpEmbed);
