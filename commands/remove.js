@@ -8,14 +8,13 @@ module.exports = {
     const error = new Discord.MessageEmbed() 
         .setColor('207144')
         .setTitle('It looks like there was an error! Please use the command like stated down below!')
-        .setDescription('`(prefix)remove, user(with @, must have a profile), amount`')  
+        .setDescription('`(prefix)remove, user(with @, must have a profile), amount(must be more than zero)`')  
     if (!args.length) return message.channel.send(error);
     const amount = args[1];
     const target = message.mentions.users.first();
     if (!target) return message.channel.send(error);
 
     if (amount % 1 != 0 || amount <= 0) return message.channel.send(error);
-    if (amount > profileModel) return message.channel.send(error);
 
     try {
       const targetData = await profileModel.findOne({ userID: target.id });

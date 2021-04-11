@@ -8,7 +8,7 @@ module.exports = {
     const error = new Discord.MessageEmbed() 
         .setColor('207144')
         .setTitle('It looks like there was an error! Please use the command like stated down below!')
-        .setDescription('`(prefix)give, user(with @, must have a profile), amount`')  
+        .setDescription('`(prefix)give, user(with @, must have a profile), amount(must be more than 0)`')  
     if (!args.length) return message.channel.send(error);
     const amount = args[1];
     const target = message.mentions.users.first();
