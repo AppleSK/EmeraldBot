@@ -16,6 +16,7 @@ module.exports = {
         {name: 'give', value: 'A command only for admins, gives a member any amount of bars!'},
         {name: 'remove', value: 'A command only for admins, removes any amount of bars from a member. (You can go into negative numbers!)'},
         {name: 'search', value: 'Search a location for some bars!'},
+        {name: 'icon', value: 'Get an icon of a member!'},
         )
 
         message.channel.send(helpEmbed);
