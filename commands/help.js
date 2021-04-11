@@ -14,6 +14,7 @@ module.exports = {
         {name: '+withdraw', value: 'Withdraw bars from your bank!'},
         {name: '+deposit', value: 'Deposit bars into your bank!'},
         {name: '+give', value: 'A command only for admins, gives a member any amount of bars!'},
+        {name: '+search', value: 'Search a location for some bars!'},
         )
 
         message.channel.send(helpEmbed);

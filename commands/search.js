@@ -44,7 +44,6 @@ module.exports = {
         .setColor("#207144'")
         .setTitle(`${message.author.username} searched a ${m.content}!`)
         .setDescription(`You found ${RANDOM_NUMBER.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}<:HPbar:830500268089147424>`)
-
       await PROFILE_MODEL.findOneAndUpdate(
         {
           userID: message.author.id,
@@ -62,18 +61,18 @@ module.exports = {
     COLLECTOR.on("end", (collected) => {
       if (collected.size == 0) {
         return message.channel.send(
-          `What are you doing <@${message.author.id}>?! There was ${RANDOM_NUMBER.toString().replace(
+          `<@${message.author.id}>, there was ${RANDOM_NUMBER.toString().replace(
             /\B(?=(\d{3})+(?!\d))/g,
             ","
           )}<:HPbar:830500268089147424>hidden inside the ${chosenLocations[0]}!`
         );
       }
     });
+    const SEARCHEMBED = new Discord.MessageEmbed()
+    .setColor("#207144'")
+    .setTitle('Where would you like to search?')
+    .setDescription(`\nType the location in this channel.\n\`${chosenLocations.join("` `")}\``)
 
-    message.channel.send(
-      `<@${
-        message.author.id
-      }>\n**Which location would you like to search?** <:HPsearch:830534770420875275>\nType the location in this channel.\n\`${chosenLocations.join("` `")}\``
-    );
+    message.channel.send(SEARCHEMBED);
   },
 };
