@@ -15,7 +15,6 @@ module.exports = {
     if (!target) return message.channel.send(error);
 
     if (amount % 1 != 0 || amount <= 0) return message.channel.send(error);
-
     try {
       const targetData = await profileModel.findOne({ userID: target.id });
       if (!targetData) return message.channel.send(error);
