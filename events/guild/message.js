@@ -80,11 +80,7 @@ module.exports = async (Discord, client, message) => {
         if (invalidPerms.length){
           return message.channel.send(Permserror);
         }
-      }    
-      const COOLDOWNEMBED = new Discord.MessageEmbed() 
-        .setColor('207144')
-        .setTitle('Cooldown')
-        .setDescription(`Please wait ${time_left.toFixed(1)} more seconds before using this command!`) 
+      }     
 
     if (command.cooldown) {
     if(!cooldowns.has(command.name)){
@@ -100,6 +96,11 @@ module.exports = async (Discord, client, message) => {
 
         if(current_time < expiration_time){
             const time_left = (expiration_time - current_time) / 1000;
+            
+            const COOLDOWNEMBED = new Discord.MessageEmbed() 
+            .setColor('207144')
+            .setTitle('Cooldown')
+            .setDescription(`Please wait ${time_left.toFixed(1)} more seconds before using this command!`)        
 
             return message.reply(COOLDOWNEMBED);
         }
