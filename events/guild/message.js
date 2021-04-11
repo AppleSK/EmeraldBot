@@ -66,7 +66,7 @@ module.exports = async (Discord, client, message) => {
         "MANAGE_WEBHOOKS",
         "MANAGE_EMOJIS",
       ]
-    
+      if(!command) return;  
       if(command.permissions.length){
         let invalidPerms = []
         for(const perm of command.permissions){
