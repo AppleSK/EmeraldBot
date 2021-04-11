@@ -28,6 +28,11 @@ module.exports = async (Discord, client, message) => {
 
     const command = client.commands.get(cmd);
 
+    const Permserror = new Discord.MessageEmbed() 
+        .setColor('326E88')
+        .setTitle('Insufficient permissions!')
+        .setDescription('To perform this command you need to have permissions for it!')
+
     const validPermissions = [
         "CREATE_INSTANT_INVITE",
         "KICK_MEMBERS",
@@ -73,9 +78,13 @@ module.exports = async (Discord, client, message) => {
           }
         }
         if (invalidPerms.length){
-          return message.channel.send(`To perform this command, you need these permissions: \`${invalidPerms}\``);
+          return message.channel.send(Permserror);
         }
       }    
+      const COOLDOWNEMBED = new Discord.MessageEmbed() 
+        .setColor('207144')
+        .setTitle('Cooldown')
+        .setDescription(`Please wait ${time_left.toFixed(1)} more seconds before using this command!`) 
 
     if (command.cooldown) {
     if(!cooldowns.has(command.name)){
@@ -92,7 +101,7 @@ module.exports = async (Discord, client, message) => {
         if(current_time < expiration_time){
             const time_left = (expiration_time - current_time) / 1000;
 
-            return message.reply(`please wait ${time_left.toFixed(1)} more seconds before using this command!`);
+            return message.reply(COOLDOWNEMBED);
         }
 }
 
@@ -102,3 +111,4 @@ setTimeout(() => time_stamps.delete(message.author.id), cooldown_amount);
     if(command) command.execute(client, message, args, Discord, profileData);
     } 
 }
+

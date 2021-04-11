@@ -28,7 +28,7 @@ module.exports = {
       );
       const WITHDRAWEMBED = new Discord.MessageEmbed() 
         .setColor('207144')
-        .setTitle('Deposit')
+        .setTitle('Withdraw')
         .setDescription(`You withdrew ${amount}<:HPbar:830500268089147424>into your wallet!`)  
 
       return message.channel.send(WITHDRAWEMBED);
