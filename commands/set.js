@@ -3,12 +3,12 @@ module.exports = {
   name: "set",
   permissions: ["ADMINISTRATOR"],
   cooldown: 10,
-  description: "Set bars of a member!",
+  description: "Set bars FOR a member!",
   async execute(client, message, args, Discord, profileData) {
     const error = new Discord.MessageEmbed() 
         .setColor('207144')
         .setTitle('It looks like there was an error! Please use the command like stated down below!')
-        .setDescription('`(prefix)set, user(with @, must have a profile), amount`')  
+        .setDescription('`(prefix)set, user(with @, must have a profile), amount(must be more than 0)`')  
     if (!args.length) return message.channel.send(error);
     const amount = args[1];
     const target = message.mentions.users.first();
@@ -29,12 +29,12 @@ module.exports = {
           },
         }
       );
-      const GIVEEMBED = new Discord.MessageEmbed() 
+      const SETEM = new Discord.MessageEmbed() 
         .setColor('207144')
-        .setTitle('Give')
-        .setDescription(`Sucessfully set ${amount}<:HPbar:830500268089147424>!`) 
+        .setTitle('Set')
+        .setDescription(`Sucessfully set to ${amount}<:HPbar:830500268089147424>!`) 
 
-      return message.channel.send(GIVEEMBED);
+      return message.channel.send(SETEM);
     } catch (err) {
       console.log(err);
     }
