@@ -7,7 +7,6 @@ permissions: [],
 cooldown: 300,
 description: "Work to get some bars!",
 async execute(client, message, args, Discord, profileData) {
-
     const user = message.author;
 
         const replies = ['programmer','builder','waiter','driver','chef','mechanic', 'gamer', 'YouTuber', 'teacher', 'artist', 'developer', 'doctor', 'nurse', 'dentist', 'scientist', 'pilot', 'engineer', 'lawyer', 'manager', 'architect', 'plumber', 'firefighter']
