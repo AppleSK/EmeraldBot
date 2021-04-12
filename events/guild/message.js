@@ -2,6 +2,7 @@ require('dotenv').config();
 const profileModel = require('../../models/profileSchema');
 
 const cooldowns = new Map();
+const cooldowns1 = new Map();
 
 module.exports = async (Discord, client, message) => {
     const prefix = process.env.PREFIX;
@@ -104,12 +105,13 @@ module.exports = async (Discord, client, message) => {
 
             return message.reply(COOLDOWNEMBED);
         }
-}
-
-time_stamps.set(message.author.id, current_time);
+      }
+            time_stamps.set(message.author.id, current_time);
 setTimeout(() => time_stamps.delete(message.author.id), cooldown_amount);
 
     if(command) command.execute(client, message, args, Discord, profileData);
     } 
-}
+  }
+  
+
 

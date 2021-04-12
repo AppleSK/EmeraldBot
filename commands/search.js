@@ -31,7 +31,7 @@ module.exports = {
 
     let chosenLocations = LOCATIONS.sort(() => Math.random() - Math.random()).slice(0, 3);
 
-    const RANDOM_NUMBER = Math.floor(Math.random() * (1000 - 100 + 1)) + 100;
+    const RANDOM_NUMBER = Math.floor(Math.random() * (150 - 100 + 1)) + 20;
 
     const FILTER = (m) => {
       return chosenLocations.some((answer) => answer.toLowerCase() === m.content.toLowerCase()) && m.author.id === message.author.id;
