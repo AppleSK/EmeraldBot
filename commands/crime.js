@@ -4,13 +4,13 @@ const profileModel = require("../models/profileSchema");
 module.exports = {
 	name: "crime",
     permissions: [],
-    cooldown: 120,
+    cooldown: 50,
 	description: "Commit a crime!",
     async execute(client, message, args, Discord, profileData) {
    
     const user = message.author;
   
-    const random = Math.floor(Math.random() * 450) + 1;
+    const random = Math.floor(Math.random() * 701) + 1;
         
 
         const result = [
