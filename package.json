@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^12.5.3",
+    "discord.js-collector": "^1.8.9",
     "dotenv": "^8.2.0",
     "fs": "0.0.1-security",
     "mongoose": "^5.12.3"
