@@ -19,7 +19,7 @@ description: "Gamble for some coins! 50/50 chance",
     if(money > bars) return message.channel.send(error);
 
     if (random == 0) { // Jackpot
-      const jackpot = money * 4
+      const jackpot = money * 12
       const jackpotembed = new Discord.MessageEmbed()
       .setColor('207144')
       .setTitle('Jackpot')
@@ -38,7 +38,7 @@ description: "Gamble for some coins! 50/50 chance",
         )
     }
     else if (random == 5) { // win
-     const reward = money * 2.50
+     const reward = money * 5
      const rewardembed = new Discord.MessageEmbed()
      .setColor('207144')
      .setTitle('Reward')
