@@ -4,7 +4,7 @@ const profileModel = require("../models/profileSchema");
 module.exports = {
 	name: "pay",
     permissions: [],
-    cooldown: 3,
+    cooldown: 12,
 	description: "Pay someone!",
 
 async execute(client, message, args, Discord, profileData) {
