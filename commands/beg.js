@@ -17,7 +17,8 @@ description: "beg for coins",
       }
     );
     const error = new Discord.MessageEmbed() 
-    .setColor('#207144')
+    .setAuthor(message.author.tag, message.author.avatarURL())
+    .setColor('#30FFA5')
     .setTitle('Beg')
     .setDescription(`You begged and received ${randomNumber} <:HPbar:830500268089147424>`)
     return message.channel.send(error);

@@ -15,9 +15,10 @@ async execute(client, message, args, Discord, profileData) {
         const amount = Math.floor(Math.random() * 250) + 1;
 
         const embed1 = new Discord.MessageEmbed()
+        .setAuthor(message.author.tag, message.author.avatarURL())
         .setTitle("Work")
         .setDescription(`You worked as \`${replies[result]}\` and earned ${amount}<:HPbar:830500268089147424>`)
-        .setColor("207144")
+        .setColor("30FFA5")
         message.channel.send(embed1)
         
         await profileModel.findOneAndUpdate(

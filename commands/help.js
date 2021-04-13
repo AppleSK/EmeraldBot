@@ -5,7 +5,8 @@ module.exports = {
     description: "Embed for commands!",
     execute(client, message, args, Discord) {
         const helpEmbed = new Discord.MessageEmbed()
-        .setColor('#207144')
+        .setAuthor(message.author.tag, message.author.avatarURL())
+        .setColor('#30FFA5')
         .setTitle('Help')
         .setDescription('Every command and what it does!')
         .addFields(

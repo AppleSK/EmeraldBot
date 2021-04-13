@@ -6,7 +6,8 @@ module.exports = {
     //Use your own execute parameters
     execute(client, message, args, Discord) {
         const error = new Discord.MessageEmbed() 
-        .setColor('207144')
+        .setAuthor(message.author.tag, message.author.avatarURL())
+        .setColor('30FFA5')
         .setTitle('It looks like there was an error! Please use the command like stated down below!')
         .setDescription('`(prefix)icon, user(with @, write anything for your icon)`') 
         if(!args[0]) return message.channel.send(error) 

@@ -41,7 +41,8 @@ module.exports = {
 
     COLLECTOR.on("collect", async (m) => {
       const EMBED = new Discord.MessageEmbed()
-        .setColor("#207144'")
+        .setAuthor(message.author.tag, message.author.avatarURL())
+        .setColor("#30FFA5'")
         .setTitle(`${message.author.username} searched a ${m.content}!`)
         .setDescription(`You found ${RANDOM_NUMBER.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}<:HPbar:830500268089147424>`)
       await PROFILE_MODEL.findOneAndUpdate(
@@ -69,7 +70,8 @@ module.exports = {
       }
     });
     const SEARCHEMBED = new Discord.MessageEmbed()
-    .setColor("#207144'")
+    .setAuthor(message.author.tag, message.author.avatarURL())
+    .setColor("#30FFA5'")
     .setTitle('Where would you like to search?')
     .setDescription(`\nType the location in this channel.\n\`${chosenLocations.join("` `")}\``)
 

@@ -23,9 +23,10 @@ module.exports = {
      if (awnser === "LOOSELOOSE") {
 
         const jailem = new Discord.MessageEmbed()
+        .setAuthor(message.author.tag, message.author.avatarURL())
       .setTitle("Crime")
       .setDescription("You commited a crime and got arrested! You had to pay 250<:HPbar:830500268089147424>")
-      .setColor("207144")
+      .setColor("30FFA5")
           
       message.channel.send(jailem);
          
@@ -46,7 +47,7 @@ module.exports = {
       .setAuthor(message.author.tag, message.author.avatarURL())
       .setTitle("Crime")
       .setDescription(`You commited a crime! You stole ${random}<:HPbar:830500268089147424>!`)
-      .setColor("207144")
+      .setColor("30FFA5")
       await profileModel.findOneAndUpdate(
         {
           userID: user.id,

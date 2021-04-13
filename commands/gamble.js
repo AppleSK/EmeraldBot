@@ -11,7 +11,8 @@ description: "Gamble for some coins! 50/50 chance",
     const random = Math.floor(Math.random() * 37);
 
     const error = new Discord.MessageEmbed()
-    .setColor('207144')
+    .setAuthor(message.author.tag, message.author.avatarURL())
+    .setColor('30FFA5')
     .setTitle('It looks like there was an error! Please use the command like stated down below!')
     .setDescription('`(prefix)gamble, amount(must be more than zero, cannot be more than what you have)`') 
 
@@ -21,7 +22,8 @@ description: "Gamble for some coins! 50/50 chance",
     if (random == 0) { // Jackpot
       const jackpot = money * 15
       const jackpotembed = new Discord.MessageEmbed()
-      .setColor('207144')
+      .setAuthor(message.author.tag, message.author.avatarURL())
+      .setColor('30FFA5')
       .setTitle('Jackpot')
       .setDescription(`<:HPparty:831507050479484978> Congratulations! You won the <:HPparty:831507050479484978> **jackpot** <:HPparty:831507050479484978> and earned ${jackpot}<:HPbar:830500268089147424> <:HPparty:831507050479484978>`) 
         message.channel.send(jackpotembed);
@@ -40,7 +42,8 @@ description: "Gamble for some coins! 50/50 chance",
     else if (random == 5) { // win
      const reward = money * 5
      const rewardembed = new Discord.MessageEmbed()
-     .setColor('207144')
+     .setAuthor(message.author.tag, message.author.avatarURL())
+     .setColor('30FFA5')
      .setTitle('Reward')
      .setDescription(`<:HPup:830863741176250438> Congratulations! You won and earned ${reward}<:HPbar:830500268089147424>`) 
         message.channel.send(rewardembed);
@@ -59,7 +62,8 @@ description: "Gamble for some coins! 50/50 chance",
     else if (random == 10) { // win
       const reward1 = money * 5
       const rewardembed1 = new Discord.MessageEmbed()
-      .setColor('207144')
+      .setAuthor(message.author.tag, message.author.avatarURL())
+      .setColor('30FFA5')
       .setTitle('Reward')
       .setDescription(`<:HPup:830863741176250438> Congratulations! You won and earned ${reward1}<:HPbar:830500268089147424>`) 
         message.channel.send(rewardembed1);
@@ -78,7 +82,8 @@ description: "Gamble for some coins! 50/50 chance",
     else if (random == 15) { // Win
       const reward2 = money * 5
       const rewardembed2 = new Discord.MessageEmbed()
-      .setColor('207144')
+      .setAuthor(message.author.tag, message.author.avatarURL())
+      .setColor('30FFA5')
       .setTitle('Reward')
       .setDescription(`<:HPup:830863741176250438> Congratulations! You won and earned ${reward2}<:HPbar:830500268089147424>`) 
         message.channel.send(rewardembed2);
@@ -97,7 +102,8 @@ description: "Gamble for some coins! 50/50 chance",
     else if (random == 20) { // win
       const reward3 = money * 5
       const rewardembed3 = new Discord.MessageEmbed()
-      .setColor('207144')
+      .setAuthor(message.author.tag, message.author.avatarURL())
+      .setColor('30FFA5')
       .setTitle('Reward')
       .setDescription(`<:HPup:830863741176250438> Congratulations! You won and earned ${reward3}<:HPbar:830500268089147424>`) 
         message.channel.send(rewardembed3);
@@ -116,7 +122,8 @@ description: "Gamble for some coins! 50/50 chance",
     else if (random == 25) { // Win
       const reward4 = money * 5
       const rewardembed4 = new Discord.MessageEmbed()
-      .setColor('207144')
+      .setAuthor(message.author.tag, message.author.avatarURL())
+      .setColor('30FFA5')
       .setTitle('Reward')
       .setDescription(`<:HPup:830863741176250438> Congratulations! You won and earned ${reward4}<:HPbar:830500268089147424>`) 
         message.channel.send(rewardembed4);
@@ -135,7 +142,8 @@ description: "Gamble for some coins! 50/50 chance",
     else if (random == 30) { // Win
        const reward5 = money * 3
        const rewardembed5 = new Discord.MessageEmbed()
-       .setColor('207144')
+       .setAuthor(message.author.tag, message.author.avatarURL())
+       .setColor('30FFA5')
        .setTitle('Reward')
        .setDescription(`<:HPup:830863741176250438> Congratulations! You won and earned ${reward5}<:HPbar:830500268089147424>`) 
         message.channel.send(rewardembed5);
@@ -154,7 +162,8 @@ description: "Gamble for some coins! 50/50 chance",
     else if (random == 1) { // Bank error
       const reward6 = money * 3
       const rewardembed6 = new Discord.MessageEmbed()
-      .setColor('207144')
+      .setAuthor(message.author.tag, message.author.avatarURL())
+      .setColor('30FFA5')
       .setTitle('Bank Error')
       .setDescription(`<:HPno:828619271335968798> Uh oh! There was a bank error and you lost ${reward6}<:HPbar:830500268089147424>`) 
        message.channel.send(rewardembed6);
@@ -172,7 +181,8 @@ description: "Gamble for some coins! 50/50 chance",
    }
     else { // Lost
         const loseembed = new Discord.MessageEmbed()
-       .setColor('207144')
+        .setAuthor(message.author.tag, message.author.avatarURL())
+       .setColor('30FFA5')
        .setTitle('Reward')
        .setDescription(`<:HPdown:830863717423644692> You sadly lost ${money}<:HPbar:830500268089147424>`) 
         message.channel.send(loseembed);

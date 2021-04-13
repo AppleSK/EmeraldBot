@@ -6,7 +6,8 @@ module.exports = {
   description: "Set bars FOR a member!",
   async execute(client, message, args, Discord, profileData) {
     const error = new Discord.MessageEmbed() 
-        .setColor('207144')
+        .setAuthor(message.author.tag, message.author.avatarURL())
+        .setColor('30FFA5')
         .setTitle('It looks like there was an error! Please use the command like stated down below!')
         .setDescription('`(prefix)set, user(with @, must have a profile), amount(must be more than 0)`')  
     if (!args.length) return message.channel.send(error);
@@ -30,7 +31,8 @@ module.exports = {
         }
       );
       const SETEM = new Discord.MessageEmbed() 
-        .setColor('207144')
+        .setAuthor(message.author.tag, message.author.avatarURL())
+        .setColor('30FFA5')
         .setTitle('Set')
         .setDescription(`Sucessfully set to ${amount}<:HPbar:830500268089147424>!`) 
 
