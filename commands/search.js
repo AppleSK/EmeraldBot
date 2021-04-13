@@ -58,17 +58,19 @@ module.exports = {
 
       message.channel.send(EMBED);
     });
+    const NORESPONSE = new Discord.MessageEmbed()
+    .setAuthor(message.author.tag, message.author.avatarURL())
+    .setColor("#30d56b'")
+    .setTitle('Search')
+    .setDescription(`There was ${RANDOM_NUMBER.toString().replace(/\B(?=(\d{3})+(?!\d))/g,
+    ","
+    )}<:HPemerald:831588273796415489> hidden inside \n\`${chosenLocations[0]}\`!`)
 
     COLLECTOR.on("end", (collected) => {
       if (collected.size == 0) {
-        return message.channel.send(
-          `<@${message.author.id}>, there was ${RANDOM_NUMBER.toString().replace(
-            /\B(?=(\d{3})+(?!\d))/g,
-            ","
-          )}<:HPemerald:831588273796415489>hidden inside the ${chosenLocations[0]}!`
-        );
+        return message.channel.send(NORESPONSE)
+        
       }
-    });
     const SEARCHEMBED = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor("#30d56b'")
@@ -77,4 +79,5 @@ module.exports = {
 
     message.channel.send(SEARCHEMBED);
   },
-};
+    )}
+}
