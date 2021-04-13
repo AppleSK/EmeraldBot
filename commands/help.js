@@ -1,7 +1,7 @@
 module.exports = {
     name: 'help',
     permissions: [],
-    cooldown: 0.1,
+    cooldown: 5,
     description: "Embed for commands!",
     execute(client, message, args, Discord) {
         const helpEmbed = new Discord.MessageEmbed()
