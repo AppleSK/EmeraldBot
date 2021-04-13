@@ -2,7 +2,7 @@ const profileModel = require("../models/profileSchema");
 module.exports = {
 name: "gamble",
 permissions: [],
-cooldown: 10,
+cooldown: 1,
 description: "Gamble for some coins! 50/50 chance",
   async execute(client, message, args, Discord, profileData) {
     const user = message.author;
@@ -19,7 +19,7 @@ description: "Gamble for some coins! 50/50 chance",
     if(money > bars) return message.channel.send(error);
 
     if (random == 0) { // Jackpot
-      const jackpot = money * 12
+      const jackpot = money * 15
       const jackpotembed = new Discord.MessageEmbed()
       .setColor('207144')
       .setTitle('Jackpot')
@@ -57,7 +57,7 @@ description: "Gamble for some coins! 50/50 chance",
         )
     }
     else if (random == 10) { // win
-      const reward1 = money * 2.50
+      const reward1 = money * 5
       const rewardembed1 = new Discord.MessageEmbed()
       .setColor('207144')
       .setTitle('Reward')
@@ -76,7 +76,7 @@ description: "Gamble for some coins! 50/50 chance",
         )
     }
     else if (random == 15) { // Win
-      const reward2 = money * 2.50
+      const reward2 = money * 5
       const rewardembed2 = new Discord.MessageEmbed()
       .setColor('207144')
       .setTitle('Reward')
@@ -95,7 +95,7 @@ description: "Gamble for some coins! 50/50 chance",
         )
     }
     else if (random == 20) { // win
-      const reward3 = money * 2.50
+      const reward3 = money * 5
       const rewardembed3 = new Discord.MessageEmbed()
       .setColor('207144')
       .setTitle('Reward')
@@ -114,7 +114,7 @@ description: "Gamble for some coins! 50/50 chance",
         )
     }
     else if (random == 25) { // Win
-      const reward4 = money * 2.50
+      const reward4 = money * 5
       const rewardembed4 = new Discord.MessageEmbed()
       .setColor('207144')
       .setTitle('Reward')
@@ -133,7 +133,7 @@ description: "Gamble for some coins! 50/50 chance",
         )
     }
     else if (random == 30) { // Win
-       const reward5 = money * 2.50
+       const reward5 = money * 3
        const rewardembed5 = new Discord.MessageEmbed()
        .setColor('207144')
        .setTitle('Reward')
@@ -151,6 +151,25 @@ description: "Gamble for some coins! 50/50 chance",
           
         )
     }
+    else if (random == 1) { // Bank error
+      const reward6 = money * 3
+      const rewardembed6 = new Discord.MessageEmbed()
+      .setColor('207144')
+      .setTitle('Bank Error')
+      .setDescription(`<:HPno:828619271335968798> Uh oh! There was a bank error and you lost ${reward6}<:HPbar:830500268089147424>`) 
+       message.channel.send(rewardembed6);
+       await profileModel.findOneAndUpdate(
+           {
+             userID: user.id,
+           },
+           {
+             $inc: {
+               bars: -reward6,
+             }
+           }
+         
+       )
+   }
     else { // Lost
         const loseembed = new Discord.MessageEmbed()
        .setColor('207144')
