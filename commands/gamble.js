@@ -2,7 +2,7 @@ const profileModel = require("../models/profileSchema");
 module.exports = {
 name: "gamble",
 permissions: [],
-cooldown: 1,
+cooldown: 20,
 description: "Gamble for some coins! 50/50 chance",
   async execute(client, message, args, Discord, profileData) {
     const user = message.author;

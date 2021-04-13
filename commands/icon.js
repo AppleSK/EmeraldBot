@@ -5,20 +5,24 @@ module.exports = {
     description: 'Return a useravatar picture!',
     //Use your own execute parameters
     execute(client, message, args, Discord) {
-        const error = new Discord.MessageEmbed() 
+        const yourprf = new Discord.MessageEmbed() 
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('30d56b')
-        .setTitle('It looks like there was an error! Please use the command like stated down below!')
-        .setDescription('`(prefix)icon, user(with @, write anything for your icon)`') 
-        if(!args[0]) return message.channel.send(error) 
-        if (!message.mentions.users.size) {
-            return message.channel.send(`**This is your profile picture!** ${message.author.displayAvatarURL({ dynamic: true })}`);
-        }
+        .setTitle('Icon')
+        .setDescription(`This is your profile picture!`) 
+        .setImage(`${message.author.displayAvatarURL({ dynamic: true })}`)
+
+        if(!args[0]) return message.channel.send(yourprf);
 
         const avatar_list = message.mentions.users.map(user => {
-            return `** This is ${user.username}'s profile picture!** ${user.displayAvatarURL({ dynamic: true })}`;
-        });
-
-        message.channel.send(avatar_list);
+            const otherprf = new Discord.MessageEmbed() 
+        .setAuthor(message.author.tag, message.author.avatarURL())
+        .setColor('30d56b')
+        .setTitle('Icon')
+        .setDescription(`This is ${user.username}'s profile picture!`) 
+        .setImage(`${user.displayAvatarURL({ dynamic: true })}`)
+            return (otherprf)
+        })
+        message.channel.send(avatar_list)
     }
 }
