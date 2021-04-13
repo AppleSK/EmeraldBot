@@ -7,7 +7,7 @@ module.exports = {
   async execute(client, message, args, Discord, profileData) {
     const error = new Discord.MessageEmbed() 
     .setAuthor(message.author.tag, message.author.avatarURL())
-        .setColor('30FFA5')
+        .setColor('30d56b')
         .setTitle('It looks like there was an error! Please use the command like stated down below!')
         .setDescription('`(prefix)deposit, amount(must be a whole number, cannot be more than what you have in your wallet)`')  
     const amount = args[0];
@@ -27,9 +27,9 @@ module.exports = {
       );
       const DEPOSITEMBED = new Discord.MessageEmbed() 
       .setAuthor(message.author.tag, message.author.avatarURL())
-      .setColor('30FFA5')
+      .setColor('30d56b')
       .setTitle('Deposit')
-      .setDescription(`You deposited ${amount}<:HPbar:830500268089147424>into your bank!`)   
+      .setDescription(`You deposited ${amount}<:HPemerald:831588273796415489>into your bank!`)   
 
       return message.channel.send(DEPOSITEMBED);
     } catch (err) {

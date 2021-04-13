@@ -10,7 +10,7 @@ module.exports = {
 
     const error = new Discord.MessageEmbed() 
     .setAuthor(message.author.tag, message.author.avatarURL())
-    .setColor('30FFA5')
+    .setColor('30d56b')
     .setTitle('It looks like there was an error! Please use the command like stated down below!')
     .setDescription('`(prefix)hourly`') 
 
@@ -31,9 +31,9 @@ module.exports = {
 
         const HOURLYEMBED = new Discord.MessageEmbed() 
         .setAuthor(message.author.tag, message.author.avatarURL())
-        .setColor('30FFA5')
+        .setColor('30d56b')
         .setTitle('Hourly')
-        .setDescription(`Sucessfully redeemed your hourly reward of ${randomNumber}<:HPbar:830500268089147424>! Come back in a hour to claim it again.`) 
+        .setDescription(`Sucessfully redeemed your hourly reward of ${randomNumber}<:HPemerald:831588273796415489>! Come back in a hour to claim it again.`) 
         return message.channel.send(HOURLYEMBED);
     } catch (err) {
       console.log(err);

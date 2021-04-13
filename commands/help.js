@@ -6,7 +6,7 @@ module.exports = {
     execute(client, message, args, Discord) {
         const helpEmbed = new Discord.MessageEmbed()
         .setAuthor(message.author.tag, message.author.avatarURL())
-        .setColor('#30FFA5')
+        .setColor('#30d56b')
         .setTitle('Help')
         .setDescription('Every command and what it does!')
         .addFields(

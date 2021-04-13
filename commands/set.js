@@ -7,7 +7,7 @@ module.exports = {
   async execute(client, message, args, Discord, profileData) {
     const error = new Discord.MessageEmbed() 
         .setAuthor(message.author.tag, message.author.avatarURL())
-        .setColor('30FFA5')
+        .setColor('30d56b')
         .setTitle('It looks like there was an error! Please use the command like stated down below!')
         .setDescription('`(prefix)set, user(with @, must have a profile), amount(must be more than 0)`')  
     if (!args.length) return message.channel.send(error);
@@ -32,9 +32,9 @@ module.exports = {
       );
       const SETEM = new Discord.MessageEmbed() 
         .setAuthor(message.author.tag, message.author.avatarURL())
-        .setColor('30FFA5')
+        .setColor('30d56b')
         .setTitle('Set')
-        .setDescription(`Sucessfully set to ${amount}<:HPbar:830500268089147424>!`) 
+        .setDescription(`Sucessfully set to ${amount}<:HPemerald:831588273796415489>!`) 
 
       return message.channel.send(SETEM);
     } catch (err) {

@@ -7,7 +7,7 @@ module.exports = {
   async execute(client, message, args, Discord, profileData) {
     const error = new Discord.MessageEmbed() 
     .setAuthor(message.author.tag, message.author.avatarURL())
-        .setColor('30FFA5')
+        .setColor('30d56b')
         .setTitle('It looks like there was an error! Please use the command like stated down below!')
         .setDescription('`(prefix)withdraw, amount(must be a whole number, cannot be more than what you have in your bank)`')  
     const amount = args[0];
@@ -29,9 +29,9 @@ module.exports = {
       );
       const WITHDRAWEMBED = new Discord.MessageEmbed() 
       .setAuthor(message.author.tag, message.author.avatarURL())
-        .setColor('30FFA5')
+        .setColor('30d56b')
         .setTitle('Withdraw')
-        .setDescription(`You withdrew ${amount}<:HPbar:830500268089147424>into your wallet!`)  
+        .setDescription(`You withdrew ${amount}<:HPemerald:831588273796415489>into your wallet!`)  
 
       return message.channel.send(WITHDRAWEMBED);
     } catch (err) {

@@ -42,9 +42,9 @@ module.exports = {
     COLLECTOR.on("collect", async (m) => {
       const EMBED = new Discord.MessageEmbed()
         .setAuthor(message.author.tag, message.author.avatarURL())
-        .setColor("#30FFA5'")
+        .setColor("#30d56b'")
         .setTitle(`${message.author.username} searched a ${m.content}!`)
-        .setDescription(`You found ${RANDOM_NUMBER.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}<:HPbar:830500268089147424>`)
+        .setDescription(`You found ${RANDOM_NUMBER.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}<:HPemerald:831588273796415489>`)
       await PROFILE_MODEL.findOneAndUpdate(
         {
           userID: message.author.id,
@@ -65,13 +65,13 @@ module.exports = {
           `<@${message.author.id}>, there was ${RANDOM_NUMBER.toString().replace(
             /\B(?=(\d{3})+(?!\d))/g,
             ","
-          )}<:HPbar:830500268089147424>hidden inside the ${chosenLocations[0]}!`
+          )}<:HPemerald:831588273796415489>hidden inside the ${chosenLocations[0]}!`
         );
       }
     });
     const SEARCHEMBED = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL())
-    .setColor("#30FFA5'")
+    .setColor("#30d56b'")
     .setTitle('Where would you like to search?')
     .setDescription(`\nType the location in this channel.\n\`${chosenLocations.join("` `")}\``)
 
