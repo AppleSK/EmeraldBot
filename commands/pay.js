@@ -8,6 +8,16 @@ module.exports = {
 	description: "Pay someone!",
 
 async execute(client, message, args, Discord, profileData) {
+  const error = new Discord.MessageEmbed()
+  .setColor("207144")
+  .setTitle('It looks like there was an error! Please use the command like stated down below!')
+  .setDescription('`(prefix)pay, user(with @, must have a profile), amount(must be more than 0, cannot be more than what you have)`') 
+
+  const barserr = new Discord.MessageEmbed()
+  .setColor("207144")
+  .setTitle('It looks like you do not have anough bars to pay!')
+  .setDescription('`(prefix)pay, user(with @, must have a profile), amount(must be more than 0, cannot be more than what you have)`') 
+
   const response = profileData.bars
   const user = message.mentions.members.first()
 
@@ -15,42 +25,25 @@ async execute(client, message, args, Discord, profileData) {
 
   const member = message.author;
 
-
-  const embed1 = new Discord.MessageEmbed()
-  .setColor("#FFFFFF")
-  .setDescription(`<a:Cross:618736602901905418> Mention someone to pay`);
-
   if (!user) {
-      return message.channel.send(embed1)
+      return message.channel.send(error)
   }
-  const embed2 = new Discord.MessageEmbed()
-  .setColor("#FFFFFF")
-  .setDescription(`<:Cross:618736602901905418> Specify an amount to pay`);
-  
   if (!parseInt(args[1])) {
-      return message.channel.send(embed2)
+      return message.channel.send(error)
   }
-  const embed3 = new Discord.MessageEmbed()
-  .setColor("#FFFFFF")
-  .setDescription(`<:Cross:618736602901905418> You can't pay someone negative money`);
-
   if (message.content.includes('-')) { 
-      return message.channel.send(embed3)
+      return message.channel.send(error)
   }
-
-  const embed4 = new Discord.MessageEmbed()
-  .setColor("#FFFFFF")
-  .setDescription(`<:Cross:618736602901905418> You don't have that much money`);
-
   if (response < amount) {
-      return message.channel.send(embed4)
+      return message.channel.send(barserr)
   }
 
-  const embed5 = new Discord.MessageEmbed()
-  .setColor("#FFFFFF")
-  .setDescription(`<:Check:618736570337591296> You have payed ${user.username} ${amount} coins`);
+  const payconfirm = new Discord.MessageEmbed()
+  .setColor("207144")
+  .setTitle('Pay')
+  .setDescription(`You have payed ${user.username} ${amount}<:HPbar:830500268089147424>!`) 
   
-  message.channel.send(embed5)
+  message.channel.send(payconfirm)
 
   await profileModel.findOneAndUpdate(
     {
