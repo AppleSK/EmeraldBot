@@ -29,8 +29,7 @@ module.exports = {
       "shirt",
     ];
 
-    const allbars = profileData.bars
-    const deathrandom = Math.floor(Math.random() * 1000)
+    const deathrandom = Math.floor(Math.random() * 2)
     const bankrupt = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor("#30d56b")
@@ -43,8 +42,8 @@ module.exports = {
         userID: message.author.id,
       },
       {
-        $inc: {
-          bars: -allbars,
+        $set: {
+          bars: 0,
         },
       },
     ); if (deathrandom !== 1) {
