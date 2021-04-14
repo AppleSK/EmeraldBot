@@ -24,8 +24,8 @@ description: "Gamble for some coins! 50/50 chance",
       const jackpotembed = new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL())
       .setColor('30d56b')
-      .setTitle('Jackpot')
-      .setDescription(`<:HPparty:831507050479484978> Congratulations! You won the <:HPparty:831507050479484978> **jackpot** <:HPparty:831507050479484978> and earned ${jackpot}<:HPemerald:831588273796415489> <:HPparty:831507050479484978>`) 
+      .setTitle('Jackpot <:HPparty:831775397585879071>')
+      .setDescription(`Congratulations! You won the **jackpot** and earned ${jackpot}<:HPemerald:831588273796415489>S`) 
         message.channel.send(jackpotembed);
         await profileModel.findOneAndUpdate(
             {
@@ -44,8 +44,8 @@ description: "Gamble for some coins! 50/50 chance",
      const rewardembed = new Discord.MessageEmbed()
      .setAuthor(message.author.tag, message.author.avatarURL())
      .setColor('30d56b')
-     .setTitle('Reward')
-     .setDescription(`<:HPup:830863741176250438> Congratulations! You won and earned ${reward}<:HPemerald:831588273796415489>`) 
+     .setTitle('Reward <:HPup:831774339057451038>')
+     .setDescription(`Congratulations! You won and earned ${reward}<:HPemerald:831588273796415489>`) 
         message.channel.send(rewardembed);
         await profileModel.findOneAndUpdate(
             {
@@ -64,8 +64,8 @@ description: "Gamble for some coins! 50/50 chance",
       const rewardembed1 = new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL())
       .setColor('30d56b')
-      .setTitle('Reward')
-      .setDescription(`<:HPup:830863741176250438> Congratulations! You won and earned ${reward1}<:HPemerald:831588273796415489>`) 
+      .setTitle('Reward <:HPup:831774339057451038>')
+      .setDescription(`Congratulations! You won and earned ${reward1}<:HPemerald:831588273796415489>`) 
         message.channel.send(rewardembed1);
         await profileModel.findOneAndUpdate(
             {
@@ -84,8 +84,8 @@ description: "Gamble for some coins! 50/50 chance",
       const rewardembed2 = new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL())
       .setColor('30d56b')
-      .setTitle('Reward')
-      .setDescription(`<:HPup:830863741176250438> Congratulations! You won and earned ${reward2}<:HPemerald:831588273796415489>`) 
+      .setTitle('Reward <:HPup:831774339057451038>')
+      .setDescription(`Congratulations! You won and earned ${reward2}<:HPemerald:831588273796415489>`) 
         message.channel.send(rewardembed2);
         await profileModel.findOneAndUpdate(
             {
@@ -104,8 +104,8 @@ description: "Gamble for some coins! 50/50 chance",
       const rewardembed3 = new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL())
       .setColor('30d56b')
-      .setTitle('Reward')
-      .setDescription(`<:HPup:830863741176250438> Congratulations! You won and earned ${reward3}<:HPemerald:831588273796415489>`) 
+      .setTitle('Reward <:HPup:831774339057451038>')
+      .setDescription(`Congratulations! You won and earned ${reward3}<:HPemerald:831588273796415489>`) 
         message.channel.send(rewardembed3);
         await profileModel.findOneAndUpdate(
             {
@@ -124,8 +124,8 @@ description: "Gamble for some coins! 50/50 chance",
       const rewardembed4 = new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL())
       .setColor('30d56b')
-      .setTitle('Reward')
-      .setDescription(`<:HPup:830863741176250438> Congratulations! You won and earned ${reward4}<:HPemerald:831588273796415489>`) 
+      .setTitle('Reward <:HPup:831774339057451038>')
+      .setDescription(`Congratulations! You won and earned ${reward4}<:HPemerald:831588273796415489>`) 
         message.channel.send(rewardembed4);
         await profileModel.findOneAndUpdate(
             {
@@ -144,8 +144,8 @@ description: "Gamble for some coins! 50/50 chance",
        const rewardembed5 = new Discord.MessageEmbed()
        .setAuthor(message.author.tag, message.author.avatarURL())
        .setColor('30d56b')
-       .setTitle('Reward')
-       .setDescription(`<:HPup:830863741176250438> Congratulations! You won and earned ${reward5}<:HPemerald:831588273796415489>`) 
+       .setTitle('Reward <:HPup:831774339057451038>')
+       .setDescription(`Congratulations! You won and earned ${reward5}<:HPemerald:831588273796415489>`) 
         message.channel.send(rewardembed5);
         await profileModel.findOneAndUpdate(
             {
@@ -164,8 +164,8 @@ description: "Gamble for some coins! 50/50 chance",
       const rewardembed6 = new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL())
       .setColor('30d56b')
-      .setTitle('Bank Error')
-      .setDescription(`<:HPno:828619271335968798> Uh oh! There was a bank error and you lost ${reward6}<:HPemerald:831588273796415489>`) 
+      .setTitle('Bank Error  <:HPdown:831774272132218880>')
+      .setDescription(`Uh oh! There was a bank error and you lost ${reward6}<:HPemerald:831588273796415489>`) 
        message.channel.send(rewardembed6);
        await profileModel.findOneAndUpdate(
            {
@@ -183,8 +183,8 @@ description: "Gamble for some coins! 50/50 chance",
         const loseembed = new Discord.MessageEmbed()
         .setAuthor(message.author.tag, message.author.avatarURL())
        .setColor('30d56b')
-       .setTitle('Reward')
-       .setDescription(`<:HPdown:830863717423644692> You sadly lost ${money}<:HPemerald:831588273796415489>`) 
+       .setTitle('Reward  <:HPdown:831774272132218880>')
+       .setDescription(`You sadly lost ${money}<:HPemerald:831588273796415489>`) 
         message.channel.send(loseembed);
         await profileModel.findOneAndUpdate(
             {
