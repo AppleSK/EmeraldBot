@@ -160,12 +160,12 @@ description: "Gamble for some coins! 50/50 chance",
         )
     }
     else if (random == 1) { // Bank error
-      const reward6 = money * 3
+      const reward6 = money * 4
       const rewardembed6 = new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL())
       .setColor('30d56b')
-      .setTitle('Bank Error  <:HPdown:831774272132218880>')
-      .setDescription(`Uh oh! There was a bank error and you lost ${reward6}<:HPemerald:831588273796415489>`) 
+      .setTitle('Reward <:HPdown:831774272132218880>')
+      .setDescription(`Someone took some of your emeralds and ran away! You lost ${reward6}<:HPemerald:831588273796415489>`) 
        message.channel.send(rewardembed6);
        await profileModel.findOneAndUpdate(
            {
