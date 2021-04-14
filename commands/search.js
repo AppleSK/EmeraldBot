@@ -5,7 +5,7 @@ module.exports = {
   permissions: ["SEND_MESSAGES"],
   cooldown: 13,
   description: "Choose your search location and have a chance at some emeralds!",
-  execute(client, message, args, Discord, profileData) {
+ async execute(client, message, args, Discord, profileData) {
     const LOCATIONS = [
       "car",
       "sock",
@@ -29,6 +29,25 @@ module.exports = {
       "shirt",
     ];
 
+    const allbars = profileData.bars
+    const deathrandom = Math.floor(Math.random() * 1000)
+    const bankrupt = new Discord.MessageEmbed()
+    .setAuthor(message.author.tag, message.author.avatarURL())
+    .setColor("#30d56b")
+    .setTitle(`Search`)
+    .setDescription(`You died while searching and lost all your<:HPemerald:831588273796415489>`)
+
+  if (deathrandom == 1) return message.channel.send(bankrupt)
+    await PROFILE_MODEL.findOneAndUpdate(
+      {
+        userID: message.author.id,
+      },
+      {
+        $inc: {
+          bars: -allbars,
+        },
+      },
+    ); if (deathrandom !== 1) {
     let chosenLocations = LOCATIONS.sort(() => Math.random() - Math.random()).slice(0, 3);
 
     const RANDOM_NUMBER = Math.floor(Math.random() * (200 - 100 + 1)) + 100;
@@ -72,5 +91,6 @@ module.exports = {
     .setDescription(`\nType the location in this channel.\n\`${chosenLocations.join("` `")}\``)
 
     message.channel.send(SEARCHEMBED)
-  },
-};
+  }
+}
+}

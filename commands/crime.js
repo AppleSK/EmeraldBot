@@ -11,6 +11,7 @@ module.exports = {
     const user = message.author;
   
     const random = Math.floor(Math.random() * 701) + 1;
+    const randomlose = Math.floor(Math.random() * 800) + 1;
         
 
         const result = [
@@ -25,7 +26,7 @@ module.exports = {
         const jailem = new Discord.MessageEmbed()
         .setAuthor(message.author.tag, message.author.avatarURL())
       .setTitle("Crime")
-      .setDescription("You commited a crime and got arrested! You had to pay 250<:HPemerald:831588273796415489>")
+      .setDescription(`You commited a crime and got arrested! You had to pay ${randomlose}<:HPemerald:831588273796415489>`)
       .setColor("30d56b")
           
       message.channel.send(jailem);
@@ -36,7 +37,7 @@ module.exports = {
         },
         {
           $inc: {
-            bars: -250,
+            bars: -randomlose,
           },
         }
       );
