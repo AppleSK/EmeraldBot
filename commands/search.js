@@ -29,24 +29,6 @@ module.exports = {
       "shirt",
     ];
 
-    const deathrandom = Math.floor(Math.random() * 2)
-    const bankrupt = new Discord.MessageEmbed()
-    .setAuthor(message.author.tag, message.author.avatarURL())
-    .setColor("#30d56b")
-    .setTitle(`Search`)
-    .setDescription(`You died while searching and lost all your<:HPemerald:831588273796415489>`)
-
-  if (deathrandom == 1) return message.channel.send(bankrupt)
-    await PROFILE_MODEL.findOneAndUpdate(
-      {
-        userID: message.author.id,
-      },
-      {
-        $set: {
-          bars: 0,
-        },
-      },
-    ); if (deathrandom !== 1) {
     let chosenLocations = LOCATIONS.sort(() => Math.random() - Math.random()).slice(0, 3);
 
     const RANDOM_NUMBER = Math.floor(Math.random() * (200 - 100 + 1)) + 100;
@@ -91,5 +73,4 @@ module.exports = {
 
     message.channel.send(SEARCHEMBED)
   }
-}
 }
