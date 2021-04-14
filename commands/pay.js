@@ -44,7 +44,7 @@ async execute(client, message, args, Discord, profileData) {
   .setAuthor(message.author.tag, message.author.avatarURL())
   .setColor("30d56b")
   .setTitle('Pay')
-  .setDescription(`You have payed ${user.username} ${amount}<:HPemerald:831588273796415489>!`) 
+  .setDescription(`You have payed ${amount}<:HPemerald:831588273796415489>!`) 
   
   message.channel.send(payconfirm)
 

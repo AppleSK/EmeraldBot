@@ -3,7 +3,7 @@ const PROFILE_MODEL = require("../models/profileSchema");
 module.exports = {
   name: "search",
   permissions: ["SEND_MESSAGES"],
-  cooldown: 15,
+  cooldown: 13,
   description: "Choose your search location and have a chance at some emeralds!",
   execute(client, message, args, Discord, profileData) {
     const LOCATIONS = [
@@ -31,7 +31,7 @@ module.exports = {
 
     let chosenLocations = LOCATIONS.sort(() => Math.random() - Math.random()).slice(0, 3);
 
-    const RANDOM_NUMBER = Math.floor(Math.random() * (1000 - 100 + 1)) + 100;
+    const RANDOM_NUMBER = Math.floor(Math.random() * (200 - 100 + 1)) + 100;
 
     const FILTER = (m) => {
       return chosenLocations.some((answer) => answer.toLowerCase() === m.content.toLowerCase()) && m.author.id === message.author.id;

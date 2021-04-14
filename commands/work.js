@@ -4,7 +4,7 @@ const profileModel = require("../models/profileSchema");
 module.exports = {
 name: "work",
 permissions: [],
-cooldown: 300,
+cooldown: 110,
 description: "Work to get some bars!",
 async execute(client, message, args, Discord, profileData) {
     const user = message.author;
