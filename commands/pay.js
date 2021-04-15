@@ -8,17 +8,21 @@ module.exports = {
 	description: "Pay someone!",
 
 async execute(client, message, args, Discord, profileData) {
-  const error = new Discord.MessageEmbed()
-  .setAuthor(message.author.tag, message.author.avatarURL())
-  .setColor("30d56b")
-  .setTitle('It looks like there was an error! Please use the command like stated down below!')
-  .setDescription('`(prefix)pay, user(with @, must have a profile), amount(must be more than 0, cannot be more than what you have)`') 
-
-  const barserr = new Discord.MessageEmbed()
-  .setAuthor(message.author.tag, message.author.avatarURL())
-  .setColor("30d56b")
-  .setTitle('Pay')
-  .setDescription('It looks like you do not have anough<:HPemerald:831588273796415489> to pay!') 
+  const error = new Discord.MessageEmbed() 
+        .setAuthor(message.author.tag, message.author.avatarURL())
+        .setColor('30d56b')
+        .setTitle('`Wrong usage!`')
+        .setDescription('Please use the command like this `+pay <user> <amount>`')
+    const balanceerror = new Discord.MessageEmbed() 
+        .setAuthor(message.author.tag, message.author.avatarURL())
+        .setColor('30d56b')
+        .setTitle('`Insufficient balance!`')
+        .setDescription('It looks like you do not have that much <:HPemerald:831588273796415489> to pay!`')
+    const negativeerror = new Discord.MessageEmbed() 
+        .setAuthor(message.author.tag, message.author.avatarURL())
+        .setColor('30d56b')
+        .setTitle('`Cannot pay negative numbers or zero!`')
+        .setDescription('Please use a positive number to pay!') 
 
   const response = profileData.bars
   const user = message.mentions.members.first()
@@ -34,17 +38,20 @@ async execute(client, message, args, Discord, profileData) {
       return message.channel.send(error)
   }
   if (message.content.includes('-')) { 
-      return message.channel.send(error)
+      return message.channel.send(negativeerror)
   }
   if (response < amount) {
-      return message.channel.send(barserr)
+      return message.channel.send(balanceerror)
+  }
+  if(args[1] == 0) {
+    return message.channel.send(negativeerror)
   }
 
   const payconfirm = new Discord.MessageEmbed()
   .setAuthor(message.author.tag, message.author.avatarURL())
   .setColor("30d56b")
-  .setTitle('Pay')
-  .setDescription(`You have payed ${amount}<:HPemerald:831588273796415489>`) 
+  .setTitle('`Pay`')
+  .setDescription(`You have payed \n\`${amount}\` <:HPemerald:831588273796415489> to \n\`${user}\``) 
   
   message.channel.send(payconfirm)
 

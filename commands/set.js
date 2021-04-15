@@ -3,18 +3,23 @@ module.exports = {
   name: "set",
   permissions: ["ADMINISTRATOR"],
   cooldown: 10,
-  description: "Set emeralds for a member!",
+  description: "Set emeralds for a user!",
   async execute(client, message, args, Discord, profileData) {
     const error = new Discord.MessageEmbed() 
-        .setAuthor(message.author.tag, message.author.avatarURL())
-        .setColor('30d56b')
-        .setTitle('It looks like there was an error! Please use the command like stated down below!')
-        .setDescription('`(prefix)set, user(with @, must have a profile), amount(must be more than 0)`')  
+    .setAuthor(message.author.tag, message.author.avatarURL())
+    .setColor('30d56b')
+    .setTitle('`Wrong usage!`')
+    .setDescription('Please use the command like this `+set <user> <amount>`')
+    const negativeerror = new Discord.MessageEmbed() 
+    .setAuthor(message.author.tag, message.author.avatarURL())
+    .setColor('30d56b')
+    .setTitle('`Cannot set negative numbers or zero!`')
+    .setDescription('Please use a positive number to set!')   
     if (!args.length) return message.channel.send(error);
     const amount = args[1];
     const target = message.mentions.users.first();
     if (!target) return message.channel.send(error);
-    if (amount % 1 != 0 || amount <= 0) return message.channel.send(error);
+    if (amount % 1 != 0 || amount <= 0) return message.channel.send(negativeerror);
 
     try {
       const targetData = await profileModel.findOne({ userID: target.id });
@@ -33,8 +38,8 @@ module.exports = {
       const SETEM = new Discord.MessageEmbed() 
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('30d56b')
-        .setTitle('Set')
-        .setDescription(`Sucessfully set to ${amount}<:HPemerald:831588273796415489>`) 
+        .setTitle('`Set`')
+        .setDescription(`Sucessfully set to \n\`${amount}\` <:HPemerald:831588273796415489> for \n\`${target}\``) 
 
       return message.channel.send(SETEM);
     } catch (err) {

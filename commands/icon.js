@@ -9,7 +9,7 @@ module.exports = {
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('30d56b')
         .setTitle('Icon')
-        .setDescription(`This is your profile picture!`) 
+        .setDescription(`This is \n\`your\` profile picture!`) 
         .setImage(`${message.author.displayAvatarURL({ dynamic: true })}`)
 
         if(!args[0]) return message.channel.send(yourprf);
@@ -18,8 +18,8 @@ module.exports = {
             const otherprf = new Discord.MessageEmbed() 
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('30d56b')
-        .setTitle('Icon')
-        .setDescription(`This is ${user.username}'s profile picture!`) 
+        .setTitle('`Icon`')
+        .setDescription(`This is \n\`${user.username}'s\` profile picture!`) 
         .setImage(`${user.displayAvatarURL({ dynamic: true })}`)
             return (otherprf)
         })

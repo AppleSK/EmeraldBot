@@ -16,8 +16,8 @@ async execute(client, message, args, Discord, profileData) {
 
         const embed1 = new Discord.MessageEmbed()
         .setAuthor(message.author.tag, message.author.avatarURL())
-        .setTitle("Work")
-        .setDescription(`You worked as \`${replies[result]}\` and earned ${amount}<:HPemerald:831588273796415489>`)
+        .setTitle('`Work`')
+        .setDescription(`You worked as \`${replies[result]}\` and earned \n\`${amount}\` <:HPemerald:831588273796415489>`)
         .setColor("30d56b")
         message.channel.send(embed1)
         

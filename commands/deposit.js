@@ -6,14 +6,25 @@ module.exports = {
   description: "Deposit emeralds into your bank!",
   async execute(client, message, args, Discord, profileData) {
     const error = new Discord.MessageEmbed() 
-    .setAuthor(message.author.tag, message.author.avatarURL())
+        .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('30d56b')
-        .setTitle('It looks like there was an error! Please use the command like stated down below!')
-        .setDescription('`(prefix)deposit, amount(must be a whole number, cannot be more than what you have in your wallet)`')  
+        .setTitle('`Wrong usage!`')
+        .setDescription('Please use the command like this `+deposit <amount>`')
+    const balanceerror = new Discord.MessageEmbed() 
+        .setAuthor(message.author.tag, message.author.avatarURL())
+        .setColor('30d56b')
+        .setTitle('`Insufficient balance!`')
+        .setDescription('It looks like you do not have that much <:HPemerald:831588273796415489> to deposit!`')
+    const negativeerror = new Discord.MessageEmbed() 
+        .setAuthor(message.author.tag, message.author.avatarURL())
+        .setColor('30d56b')
+        .setTitle('`Cannot deposit negative numbers or zero!`')
+        .setDescription('Please use a positive number to deposit!') 
     const amount = args[0];
-    if (amount % 1 != 0 || amount <= 0) return message.channel.send(error);
+    if(!amount) return message.channel.send(error);
+    if (amount % 1 != 0 || amount <= 0) return message.channel.send(negativeerror);
     try {
-      if (amount > profileData.bars) return message.channel.send(error);
+      if (amount > profileData.bars) return message.channel.send(balanceerror);
       await profileModel.findOneAndUpdate(
         {
           userID: message.author.id,
@@ -28,8 +39,8 @@ module.exports = {
       const DEPOSITEMBED = new Discord.MessageEmbed() 
       .setAuthor(message.author.tag, message.author.avatarURL())
       .setColor('30d56b')
-      .setTitle('Deposit')
-      .setDescription(`You deposited ${amount}<:HPemerald:831588273796415489>into your bank!`)   
+      .setTitle('`Deposit`')
+      .setDescription(`You deposited \n\`${amount}\` <:HPemerald:831588273796415489> into your bank!`)   
 
       return message.channel.send(DEPOSITEMBED);
     } catch (err) {

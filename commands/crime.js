@@ -10,8 +10,8 @@ module.exports = {
       const balerror = new Discord.MessageEmbed() 
       .setAuthor(message.author.tag, message.author.avatarURL())
       .setColor('30d56b')
-      .setTitle('Crime')
-      .setDescription('You need to have at least 300<:HPemerald:831588273796415489> to commit a crime!') 
+      .setTitle('`Insufficient balance!`')
+      .setDescription('Please make sure you have at least `300` <:HPemerald:831588273796415489> to commit a crime!') 
     const bars = profileData.bars
     const user = message.author;
     if(bars < 300) return message.channel.send(balerror)
@@ -30,8 +30,8 @@ module.exports = {
 
         const jailem = new Discord.MessageEmbed()
         .setAuthor(message.author.tag, message.author.avatarURL())
-      .setTitle("Crime")
-      .setDescription(`You commited a crime and got arrested! You had to pay 300<:HPemerald:831588273796415489>`)
+      .setTitle('`Arrested`')
+      .setDescription('You commited a crime and got arrested! You had to pay `300` <:HPemerald:831588273796415489>')
       .setColor("30d56b")
           
       message.channel.send(jailem);
@@ -51,8 +51,8 @@ module.exports = {
 
     const embed = new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL())
-      .setTitle("Crime")
-      .setDescription(`You commited a crime! You stole ${random}<:HPemerald:831588273796415489>`)
+      .setTitle(`Crime`)
+      .setDescription(`You commited a crime! You stole \n\`${random}\` <:HPemerald:831588273796415489>`)
       .setColor("30d56b")
       await profileModel.findOneAndUpdate(
         {

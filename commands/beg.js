@@ -19,7 +19,7 @@ description: "Beg for emeralds",
     const error = new Discord.MessageEmbed() 
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor('#30d56b')
-    .setTitle('Beg')
+    .setTitle('`Beg`')
     .setDescription(`You begged and received ${randomNumber} <:HPemerald:831588273796415489>`)
     return message.channel.send(error);
   },

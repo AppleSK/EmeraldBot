@@ -44,7 +44,7 @@ module.exports = {
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor("#30d56b")
         .setTitle(`Search`)
-        .setDescription(`You found ${RANDOM_NUMBER.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}<:HPemerald:831588273796415489>`)
+        .setDescription(`You found \n\`${RANDOM_NUMBER.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}\` <:HPemerald:831588273796415489>`)
 
       await PROFILE_MODEL.findOneAndUpdate(
         {
@@ -68,7 +68,7 @@ module.exports = {
     const SEARCHEMBED = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor("#30d56b'")
-    .setTitle('Where would you like to search?')
+    .setTitle('`Where would you like to search?`')
     .setDescription(`\nType the location in this channel.\n\`${chosenLocations.join("` `")}\``)
 
     message.channel.send(SEARCHEMBED)

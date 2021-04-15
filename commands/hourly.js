@@ -8,16 +8,6 @@ module.exports = {
     const target = [message.author.id]
     const randomNumber = Math.floor(Math.random() * 200) + 1;
 
-    const error = new Discord.MessageEmbed() 
-    .setAuthor(message.author.tag, message.author.avatarURL())
-    .setColor('30d56b')
-    .setTitle('It looks like there was an error! Please use the command like stated down below!')
-    .setDescription('`(prefix)hourly`') 
-
-    try {
-      const targetData = await profileModel.findOne({ userID: target });
-      if (!targetData) return message.channel.send(error);
-
       await profileModel.findOneAndUpdate(
         {
           userID: target,
@@ -29,14 +19,11 @@ module.exports = {
         }
       );
 
-        const HOURLYEMBED = new Discord.MessageEmbed() 
-        .setAuthor(message.author.tag, message.author.avatarURL())
-        .setColor('30d56b')
-        .setTitle('Hourly')
-        .setDescription(`Sucessfully redeemed your hourly reward of ${randomNumber}<:HPemerald:831588273796415489> Come back in a hour to claim it again.`) 
-        return message.channel.send(HOURLYEMBED);
-    } catch (err) {
-      console.log(err);
+      const HOUREMBED = new Discord.MessageEmbed() 
+      .setAuthor(message.author.tag, message.author.avatarURL())
+      .setColor('30d56b')
+      .setTitle('`Hourly`')
+      .setDescription(`\n\`${randomNumber}\` <:HPemerald:831588273796415489> was your hourly reward. Come back in an hour to claim it again.`) 
+      return message.channel.send(HOUREMBED);
     }
-  },
-}; 
+  }
