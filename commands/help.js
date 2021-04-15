@@ -22,6 +22,7 @@ module.exports = {
         {name: 'gamble', value: 'Gamble with an amount of emeralds of your choice and you will get double or lose half of it!'},
         {name: 'work', value: 'Go to work and get some emeralds!'},
         {name: 'pay', value: 'Gift some emeralds to a member!'},
+        {name: '8ball', value: 'Ask it a question for 10 emeralds!'},
         )
 
         message.channel.send(helpEmbed);
