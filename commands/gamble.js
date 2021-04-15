@@ -25,7 +25,7 @@ description: "Gamble for some coins! 50/50 chance",
       .setAuthor(message.author.tag, message.author.avatarURL())
       .setColor('30d56b')
       .setTitle('Jackpot <:HPparty:831775397585879071>')
-      .setDescription(`Congratulations! You won the **jackpot** and earned ${jackpot}<:HPemerald:831588273796415489>S`) 
+      .setDescription(`Congratulations! You won the **jackpot** and earned ${jackpot}<:HPemerald:831588273796415489>`) 
         message.channel.send(jackpotembed);
         await profileModel.findOneAndUpdate(
             {
