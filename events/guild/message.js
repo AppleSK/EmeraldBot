@@ -32,7 +32,7 @@ module.exports = async (Discord, client, message) => {
     const Permserror = new Discord.MessageEmbed() 
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('30d56b')
-        .setTitle('Insufficient permissions!')
+        .setTitle('`Insufficient permissions!`')
         .setDescription('To perform this command you need to have permissions for it!')
 
     const validPermissions = [
@@ -102,8 +102,8 @@ module.exports = async (Discord, client, message) => {
             const COOLDOWNEMBED = new Discord.MessageEmbed() 
             .setAuthor(message.author.tag, message.author.avatarURL())
             .setColor('30d56b')
-            .setTitle('Cooldown')
-            .setDescription(`Please wait ${time_left.toFixed(1)} more seconds before using this command!`)        
+            .setTitle('`Cooldown`')
+            .setDescription(`Please wait \n\`${time_left.toFixed(1)}\` more seconds before using this command!`)        
 
             return message.reply(COOLDOWNEMBED);
         }
