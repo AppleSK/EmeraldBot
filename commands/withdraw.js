@@ -3,7 +3,7 @@ module.exports = {
   name: "withdraw",
   permissions: [],
   cooldown: 10,
-  description: "Withdraw bars from your bank!",
+  description: "Withdraw emeralds from your bank!",
   async execute(client, message, args, Discord, profileData) {
     const error = new Discord.MessageEmbed() 
     .setAuthor(message.author.tag, message.author.avatarURL())

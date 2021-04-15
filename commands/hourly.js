@@ -3,7 +3,7 @@ module.exports = {
   name: "hourly",
   permissions: [],
   cooldown: 3600,
-  description: "Get your hourly bars!",
+  description: "Get your hourly emeralds!",
   async execute(client, message, args, Discord, profileData) {
     const target = [message.author.id]
     const randomNumber = Math.floor(Math.random() * 200) + 1;
@@ -33,7 +33,7 @@ module.exports = {
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('30d56b')
         .setTitle('Hourly')
-        .setDescription(`Sucessfully redeemed your hourly reward of ${randomNumber}<:HPemerald:831588273796415489>! Come back in a hour to claim it again.`) 
+        .setDescription(`Sucessfully redeemed your hourly reward of ${randomNumber}<:HPemerald:831588273796415489> Come back in a hour to claim it again.`) 
         return message.channel.send(HOURLYEMBED);
     } catch (err) {
       console.log(err);

@@ -3,7 +3,7 @@ module.exports = {
   name: "daily",
   permissions: [],
   cooldown: 86400,
-  description: "Get your daily bars!",
+  description: "Get your daily emeralds!",
   async execute(client, message, args, Discord, profileData) {
     const target = [message.author.id]
     const randomNumber = Math.floor(Math.random() * 750) + 1;
@@ -33,7 +33,7 @@ module.exports = {
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('30d56b')
         .setTitle('Daily')
-        .setDescription(`Sucessfully redeemed your daily reward of ${randomNumber}<:HPemerald:831588273796415489>! Come back tommorow to claim it again.`) 
+        .setDescription(`Sucessfully redeemed your daily reward of ${randomNumber}<:HPemerald:831588273796415489> Come back tommorow to claim it again.`) 
         return message.channel.send(DAILYEMBED);
     } catch (err) {
       console.log(err);

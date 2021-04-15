@@ -3,7 +3,7 @@ module.exports = {
   name: "set",
   permissions: ["ADMINISTRATOR"],
   cooldown: 10,
-  description: "Set bars FOR a member!",
+  description: "Set emeralds for a member!",
   async execute(client, message, args, Discord, profileData) {
     const error = new Discord.MessageEmbed() 
         .setAuthor(message.author.tag, message.author.avatarURL())
@@ -34,7 +34,7 @@ module.exports = {
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('30d56b')
         .setTitle('Set')
-        .setDescription(`Sucessfully set to ${amount}<:HPemerald:831588273796415489>!`) 
+        .setDescription(`Sucessfully set to ${amount}<:HPemerald:831588273796415489>`) 
 
       return message.channel.send(SETEM);
     } catch (err) {

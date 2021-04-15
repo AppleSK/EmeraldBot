@@ -5,7 +5,7 @@ module.exports = {
 name: "work",
 permissions: [],
 cooldown: 110,
-description: "Work to get some bars!",
+description: "Work to get some emeralds!",
 async execute(client, message, args, Discord, profileData) {
     const user = message.author;
 

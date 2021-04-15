@@ -35,8 +35,7 @@ module.exports = {
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('30d56b')
         .setTitle('Add')
-        .setDescription(`Sucessfully added ${amount}<:HPemerald:831588273796415489>!`) 
-
+        .setDescription(`Sucessfully added ${amount}<:HPemerald:831588273796415489>`) 
       return message.channel.send(ADDEM);
     } catch (err) {
       console.log(err);

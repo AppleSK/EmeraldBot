@@ -17,8 +17,8 @@ async execute(client, message, args, Discord, profileData) {
   const barserr = new Discord.MessageEmbed()
   .setAuthor(message.author.tag, message.author.avatarURL())
   .setColor("30d56b")
-  .setTitle('It looks like you do not have anough bars to pay!')
-  .setDescription('`(prefix)pay, user(with @, must have a profile), amount(must be more than 0, cannot be more than what you have)`') 
+  .setTitle('Pay')
+  .setDescription('It looks like you do not have anough<:HPemerald:831588273796415489> to pay!') 
 
   const response = profileData.bars
   const user = message.mentions.members.first()

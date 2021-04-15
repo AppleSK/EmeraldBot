@@ -3,7 +3,7 @@ module.exports = {
 name: "gamble",
 permissions: [],
 cooldown: 10,
-description: "Gamble for some coins! 50/50 chance",
+description: "Gamble for some emeralds! 50/50 chance",
   async execute(client, message, args, Discord, profileData) {
     const user = message.author;
     const money = args[0]

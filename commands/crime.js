@@ -10,8 +10,8 @@ module.exports = {
       const balerror = new Discord.MessageEmbed() 
       .setAuthor(message.author.tag, message.author.avatarURL())
       .setColor('30d56b')
-      .setTitle('You need to have at least 300<:HPemerald:831588273796415489> to commit a crime!')
-      .setDescription('`(prefix)crime`') 
+      .setTitle('Crime')
+      .setDescription('You need to have at least 300<:HPemerald:831588273796415489> to commit a crime!') 
     const bars = profileData.bars
     const user = message.author;
     if(bars < 300) return message.channel.send(balerror)
@@ -52,7 +52,7 @@ module.exports = {
     const embed = new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL())
       .setTitle("Crime")
-      .setDescription(`You commited a crime! You stole ${random}<:HPemerald:831588273796415489>!`)
+      .setDescription(`You commited a crime! You stole ${random}<:HPemerald:831588273796415489>`)
       .setColor("30d56b")
       await profileModel.findOneAndUpdate(
         {
