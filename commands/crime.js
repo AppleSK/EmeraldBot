@@ -14,10 +14,9 @@ module.exports = {
       .setDescription('`(prefix)crime`') 
     const bars = profileData.bars
     const user = message.author;
-    if(bars < 800) return message.channel.send(balerror)
+    if(bars < 300) return message.channel.send(balerror)
   
     const random = Math.floor(Math.random() * 701) + 1;
-    const randomlose = 300;
         
 
         const result = [
@@ -43,7 +42,7 @@ module.exports = {
         },
         {
           $inc: {
-            bars: -randomlose,
+            bars: -300,
           },
         }
       );
@@ -61,7 +60,7 @@ module.exports = {
         },
         {
           $inc: {
-            bars: +random,
+            bars: random,
           },
         }
       );
