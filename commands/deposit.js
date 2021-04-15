@@ -20,7 +20,7 @@ module.exports = {
         .setColor('30d56b')
         .setTitle('`Cannot deposit negative numbers or zero!`')
         .setDescription('Please use a positive number to deposit!') 
-    const amount = args[0];
+    const amount = args[0]
     if(!amount) return message.channel.send(error);
     if (amount % 1 != 0 || amount <= 0) return message.channel.send(negativeerror);
     try {

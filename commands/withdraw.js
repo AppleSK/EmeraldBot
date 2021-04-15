@@ -19,8 +19,8 @@ const negativeerror = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor('30d56b')
     .setTitle('`Cannot withdraw negative numbers or zero!`')
-    .setDescription('Please use a positive number to withdraw!')   
-    const amount = args[0];
+    .setDescription('Please use a positive number to withdraw!') 
+    const amount = args[0]
     if(!amount) return message.channel.send(error);
     if (amount % 1 != 0 || amount <= 0) return message.channel.send(negativeerror);
 
@@ -41,8 +41,8 @@ const negativeerror = new Discord.MessageEmbed()
       const WITHDRAWEMBED = new Discord.MessageEmbed() 
       .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('30d56b')
-        .setTitle('`Deposit`')
-        .setDescription(`You deposited \n\`${amount}\` <:HPemerald:831588273796415489> into your wallet!`)  
+        .setTitle('`Withdraw`')
+        .setDescription(`You withdrew \n\`${amount}\` <:HPemerald:831588273796415489> into your wallet!`)  
 
       return message.channel.send(WITHDRAWEMBED);
     } catch (err) {

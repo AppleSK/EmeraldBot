@@ -17,12 +17,11 @@ module.exports = {
     .setDescription('Please make sure you have at least `10` <:HPemerald:831588273796415489>')
     if (!args[0]) return message.channel.send(commanderror); // return if no question is commenced
     if (profileData.bars < 10) return message.channel.send(balanceerror);
-    const replies = ['Yes.', 'No.', 'Never.', 'Definitely.', 'Ask again later.', 'Probably']; // random responses
-    const price = Math.floor(Math.random() * 5)
+    const replies = ['Yes.', 'No.', 'Never.', 'Definitely.', 'Ask again later.', 'Probably.', 'A hundred percent!', 'That is a tough question, I would say yes.', , 'That is a tough question, I would say no.', 'I have no idea, here, take some <:HPemerald:831588273796415489>', 'Oh yeah.', 'Definetly not!', 'Well yes, but actually no.', 'Very doubtful.', 'Without a doubt.', 'Better not tell you now.']; // random responses
+    const price = Math.floor(Math.random() * 5) 
     const result = Math.floor(Math.random() * replies.length); // Get a random respons for the array
     const question = args.join(' '); // join the args(Array<string>) to a question string
     // check permissions for embed
-    if (message.channel.permissionsFor(message.guild.me).has('EMBED_LINKS')) {
       const embed = new Discord.MessageEmbed() // create embed 
       .setAuthor(message.author.tag, message.author.avatarURL())  
         .setTitle('`🎱 says...`')
@@ -42,5 +41,4 @@ module.exports = {
       );
 
     }
-  },
-};
+  }
