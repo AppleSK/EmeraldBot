@@ -7,8 +7,14 @@ module.exports = {
     cooldown: 50,
 	description: "Commit a crime!",
     async execute(client, message, args, Discord, profileData) {
-   
+      const balerror = new Discord.MessageEmbed() 
+      .setAuthor(message.author.tag, message.author.avatarURL())
+      .setColor('30d56b')
+      .setTitle('You need to have at least 800<:HPemerald:831588273796415489> to commit a crime!')
+      .setDescription('`(prefix)crime`') 
+    const bars = profileData.bars
     const user = message.author;
+    if(bars < 800) return message.channel.send(balerror)
   
     const random = Math.floor(Math.random() * 701) + 1;
     const randomlose = Math.floor(Math.random() * 800) + 1;
