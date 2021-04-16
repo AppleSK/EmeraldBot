@@ -25,8 +25,8 @@ module.exports = {
       const embed = new Discord.MessageEmbed() // create embed 
       .setAuthor(message.author.tag, message.author.avatarURL())  
         .setTitle('`🎱 says...`')
-        .setColor('30d56b').addField(`\n\`Question\``, question)
-        .addField(`\n\`Answer\``, replies[result])
+        .setColor('30d56b').addField(`\n\`Question ❔\``, question)
+        .addField(`\n\`Answer 💬\``, replies[result])
         .setDescription(`You bought this for ${price} <:HPemerald:831588273796415489>`)
       await message.channel.send(embed); // send embed message
       await profileModel.findOneAndUpdate(

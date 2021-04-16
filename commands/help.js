@@ -110,7 +110,7 @@ module.exports = {
     const helpEmbed = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor('#30d56b')
-    .setTitle('`Help`')
+    .setTitle('Help')
     .addFields(
     {name: '`bal`', value: 'help bal'},
     {name: '`beg`', value: 'help beg'},

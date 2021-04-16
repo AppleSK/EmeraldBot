@@ -31,7 +31,7 @@ module.exports = {
         const jailem = new Discord.MessageEmbed()
         .setAuthor(message.author.tag, message.author.avatarURL())
       .setTitle('`Arrested`')
-      .setDescription('You commited a crime and got arrested! You had to pay `300` <:HPemerald:831588273796415489>')
+      .setDescription('`You commited a crime and got arrested! You had to pay \n\`300\` <:HPemerald:831588273796415489>`')
       .setColor("30d56b")
           
       message.channel.send(jailem);

@@ -68,7 +68,7 @@ module.exports = {
     const SEARCHEMBED = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor("#30d56b'")
-    .setTitle('`Where would you like to search?` <:HPsearch:830534770420875275>')
+    .setTitle('Where would you like to search? <:HPsearch:830534770420875275>')
     .setDescription(`\nType the location in this channel.\n\`${chosenLocations.join("` `")}\``)
 
     message.channel.send(SEARCHEMBED)
