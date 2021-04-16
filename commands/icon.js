@@ -18,7 +18,7 @@ module.exports = {
             const otherprf = new Discord.MessageEmbed() 
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('30d56b')
-        .setTitle('`Icon`')
+        .setTitle('Icon')
         .setDescription(`This is \n\`${user.username}'s\` profile picture!`) 
         .setImage(`${user.displayAvatarURL({ dynamic: true })}`)
             return (otherprf)

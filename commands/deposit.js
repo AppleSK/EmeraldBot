@@ -39,7 +39,7 @@ module.exports = {
       const DEPOSITEMBED = new Discord.MessageEmbed() 
       .setAuthor(message.author.tag, message.author.avatarURL())
       .setColor('30d56b')
-      .setTitle('`Deposit`')
+      .setTitle('Deposit')
       .setDescription(`You deposited \n\`${amount}\` <:HPemerald:831588273796415489> into your bank!`)   
 
       return message.channel.send(DEPOSITEMBED);

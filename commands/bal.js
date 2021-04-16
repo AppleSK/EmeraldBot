@@ -13,7 +13,7 @@ const MENTIONERROR = new Discord.MessageEmbed()
 const BALANCEEMBED = new Discord.MessageEmbed()
 .setAuthor(message.author.tag, message.author.avatarURL())
 .setColor("#30d56b'")
-.setTitle('`Balance`')
+.setTitle('Balance')
 .setDescription(`Wallet \n\`${profileData.bars}\`<:HPemerald:831588273796415489> 
 Bank \n\`${profileData.bank}\`<:HPemerald:831588273796415489>`)
 if(!target) {

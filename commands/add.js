@@ -40,7 +40,7 @@ module.exports = {
       const ADDEM = new Discord.MessageEmbed() 
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('30d56b')
-        .setTitle('`Add`')
+        .setTitle('Add')
         .setDescription(`Sucessfully added \n\`${amount}\` <:HPemerald:831588273796415489>`) 
       return message.channel.send(ADDEM);
     } catch (err) {

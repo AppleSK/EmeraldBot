@@ -13,7 +13,7 @@ description: "Beg for emeralds",
       const nothingembed = new Discord.MessageEmbed() 
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor('#30d56b')
-    .setTitle('`Beg`')
+    .setTitle('Beg')
     .setDescription(`You begged but nothing happened!`)
       return message.channel.send(nothingembed);
     } else if(probability == 2) {
@@ -30,7 +30,7 @@ description: "Beg for emeralds",
         const boostedembed = new Discord.MessageEmbed() 
       .setAuthor(message.author.tag, message.author.avatarURL())
       .setColor('#30d56b')
-      .setTitle('`Beg`')
+      .setTitle('Beg')
       .setDescription(`You begged and a rich person gave you \n\`${boostedrandomNumber}\` <:HPemerald:831588273796415489>`)
         return message.channel.send(boostedembed); 
     } else if(probability == 3) {
@@ -47,7 +47,7 @@ description: "Beg for emeralds",
           const beatupembed = new Discord.MessageEmbed() 
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('#30d56b')
-        .setTitle('`Beat up`')
+        .setTitle('Beat up')
         .setDescription(`You begged and got beaten up! You lost \n\`${beatupNumber}\` <:HPemerald:831588273796415489>`)
           return message.channel.send(beatupembed);  
     } else {
@@ -64,7 +64,7 @@ description: "Beg for emeralds",
       const error = new Discord.MessageEmbed() 
       .setAuthor(message.author.tag, message.author.avatarURL())
       .setColor('#30d56b')
-      .setTitle('`Beg`')
+      .setTitle('Beg')
       .setDescription(`You begged and received \n\`${randomNumber}\` <:HPemerald:831588273796415489>`)
       return message.channel.send(error)
     }

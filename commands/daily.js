@@ -22,7 +22,7 @@ module.exports = {
         const DAILYEMBED = new Discord.MessageEmbed() 
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('30d56b')
-        .setTitle('`Daily`')
+        .setTitle('Daily')
         .setDescription(`\n\`${randomNumber}\` <:HPemerald:831588273796415489> was your daily reward. Come back tommorow to claim it again.`) 
         return message.channel.send(DAILYEMBED);
     }

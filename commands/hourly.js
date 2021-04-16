@@ -22,7 +22,7 @@ module.exports = {
       const HOUREMBED = new Discord.MessageEmbed() 
       .setAuthor(message.author.tag, message.author.avatarURL())
       .setColor('30d56b')
-      .setTitle('`Hourly`')
+      .setTitle('Hourly')
       .setDescription(`\n\`${randomNumber}\` <:HPemerald:831588273796415489> was your hourly reward. Come back in an hour to claim it again.`) 
       return message.channel.send(HOUREMBED);
     }

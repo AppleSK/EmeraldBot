@@ -50,8 +50,8 @@ async execute(client, message, args, Discord, profileData) {
   const payconfirm = new Discord.MessageEmbed()
   .setAuthor(message.author.tag, message.author.avatarURL())
   .setColor("30d56b")
-  .setTitle('`Pay`')
-  .setDescription(`You have payed \n\`${amount}\` <:HPemerald:831588273796415489> to \n\`${user}\``) 
+  .setTitle('Pay')
+  .setDescription(`You paid \n\`${amount}\` <:HPemerald:831588273796415489> to \n\`${user}\``) 
   
   message.channel.send(payconfirm)
 

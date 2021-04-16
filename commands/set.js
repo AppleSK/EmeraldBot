@@ -38,7 +38,7 @@ module.exports = {
       const SETEM = new Discord.MessageEmbed() 
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('30d56b')
-        .setTitle('`Set`')
+        .setTitle('Set')
         .setDescription(`Sucessfully set to \n\`${amount}\` <:HPemerald:831588273796415489>`) 
 
       return message.channel.send(SETEM);
