@@ -102,7 +102,7 @@ module.exports = async (Discord, client, message) => {
             const COOLDOWNEMBED = new Discord.MessageEmbed() 
             .setAuthor(message.author.tag, message.author.avatarURL())
             .setColor('30d56b')
-            .setTitle('`Cooldown`')
+            .setTitle('Cooldown')
             .setDescription(`Please wait \n\`${time_left.toFixed(1)}\` more seconds before using this command!`)        
 
             return message.reply(COOLDOWNEMBED);
