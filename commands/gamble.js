@@ -35,8 +35,8 @@ description: "Gamble for some emeralds! 50/50 chance",
       const jackpotembed = new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL())
       .setColor('30d56b')
-      .setTitle('Jackpot <:HPjackpotmoney:832313066451632178>')
-      .setDescription(`Congratulations! You won the \n\`jackpot\` and earned \n\`${jackpot}\` <:HPemerald:831588273796415489>`) 
+      .setTitle('Jackpot')
+      .setDescription(`<:HPjackpot:833315238811271198> Congratulations! You won the \n\`jackpot\` and earned \n\`${jackpot}\` <:HPemerald:831588273796415489>`) 
         message.channel.send(jackpotembed);
         await profileModel.findOneAndUpdate(
             {
@@ -55,8 +55,8 @@ description: "Gamble for some emeralds! 50/50 chance",
      const rewardembed = new Discord.MessageEmbed()
      .setAuthor(message.author.tag, message.author.avatarURL())
      .setColor('30d56b')
-     .setTitle('Reward <:HPgoodmoney:832313053580230668><:HPgoodmoney:832313053580230668>')
-     .setDescription(`Nice! You won a \n\`5x reward\` and earned \n\`${reward}\` <:HPemerald:831588273796415489>`) 
+     .setTitle('Reward')
+     .setDescription(`<:HP5x:833315238760939520> Nice! You won a \n\`5x reward\` and earned \n\`${reward}\` <:HPemerald:831588273796415489>`) 
         message.channel.send(rewardembed);
         await profileModel.findOneAndUpdate(
             {
@@ -75,8 +75,8 @@ description: "Gamble for some emeralds! 50/50 chance",
       const rewardembed1 = new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL())
       .setColor('30d56b')
-      .setTitle('Reward <:HPgoodmoney:832313053580230668><:HPgoodmoney:832313053580230668>')
-      .setDescription(`Nice! You won a \n\`5x reward\` and earned \n\`${reward1}\` <:HPemerald:831588273796415489>`)
+      .setTitle('Reward')
+      .setDescription(`<:HP5x:833315238760939520> Nice! You won a \n\`5x reward\` and earned \n\`${reward1}\` <:HPemerald:831588273796415489>`)
         message.channel.send(rewardembed1);
         await profileModel.findOneAndUpdate(
             {
@@ -95,8 +95,8 @@ description: "Gamble for some emeralds! 50/50 chance",
       const rewardembed2 = new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL())
       .setColor('30d56b')
-      .setTitle('Reward <:HPgoodmoney:832313053580230668><:HPgoodmoney:832313053580230668>')
-      .setDescription(`Nice! You won a \n\`5x reward\` and earned \n\`${reward2}\` <:HPemerald:831588273796415489>`) 
+      .setTitle('Reward')
+      .setDescription(`<:HP5x:833315238760939520> Nice! You won a \n\`5x reward\` and earned \n\`${reward2}\` <:HPemerald:831588273796415489>`) 
         message.channel.send(rewardembed2);
         await profileModel.findOneAndUpdate(
             {
@@ -115,8 +115,8 @@ description: "Gamble for some emeralds! 50/50 chance",
       const rewardembed3 = new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL())
       .setColor('30d56b')
-      .setTitle('Reward <:HPgoodmoney:832313053580230668><:HPgoodmoney:832313053580230668>')
-      .setDescription(`Nice! You won a \n\`5x reward\` and earned \n\`${reward3}\` <:HPemerald:831588273796415489>`)
+      .setTitle('Reward')
+      .setDescription(`<:HP5x:833315238760939520> Nice! You won a \n\`5x reward\` and earned \n\`${reward3}\` <:HPemerald:831588273796415489>`)
         message.channel.send(rewardembed3);
         await profileModel.findOneAndUpdate(
             {
@@ -135,8 +135,8 @@ description: "Gamble for some emeralds! 50/50 chance",
       const rewardembed4 = new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL())
       .setColor('30d56b')
-      .setTitle('Reward <:HPgoodmoney:832313053580230668><:HPgoodmoney:832313053580230668>')
-      .setDescription(`Nice! You won a \n\`5x reward\` and earned \n\`${reward4}\` <:HPemerald:831588273796415489>`) 
+      .setTitle('Reward')
+      .setDescription(`<:HP5x:833315238760939520> Nice! You won a \n\`5x reward\` and earned \n\`${reward4}\` <:HPemerald:831588273796415489>`) 
         message.channel.send(rewardembed4);
         await profileModel.findOneAndUpdate(
             {
@@ -155,8 +155,8 @@ description: "Gamble for some emeralds! 50/50 chance",
        const rewardembed5 = new Discord.MessageEmbed()
        .setAuthor(message.author.tag, message.author.avatarURL())
        .setColor('30d56b')
-       .setTitle('Reward <:HPgoodmoney:832313053580230668>')
-       .setDescription(`Cool! You won a \n\`3x reward\` and earned \n\`${reward5}\` <:HPemerald:831588273796415489>`)
+       .setTitle('Reward')
+       .setDescription(`<:HP3x:833317273254887434> Cool! You won a \n\`3x reward\` and earned \n\`${reward5}\` <:HPemerald:831588273796415489>`)
         message.channel.send(rewardembed5);
         await profileModel.findOneAndUpdate(
             {
@@ -175,8 +175,8 @@ description: "Gamble for some emeralds! 50/50 chance",
       const rewardembed6 = new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL())
       .setColor('30d56b')
-      .setTitle('Robbed <:HPverybadmoney:832313078342352996>')
-      .setDescription(`Someone took some of your emeralds and ran away! You lost \n\`${reward6}\` <:HPemerald:831588273796415489>`) 
+      .setTitle('Robbed')
+      .setDescription(`<:HPstole:833315238685311006 Someone took some of your emeralds and ran away! You lost \n\`${reward6}\` <:HPemerald:831588273796415489>`) 
        message.channel.send(rewardembed6);
        await profileModel.findOneAndUpdate(
            {
@@ -194,8 +194,8 @@ description: "Gamble for some emeralds! 50/50 chance",
         const loseembed = new Discord.MessageEmbed()
         .setAuthor(message.author.tag, message.author.avatarURL())
        .setColor('30d56b')
-       .setTitle('Lost <:HPbadmoney:832313037179453530>')
-       .setDescription(`You sadly lost \n\`${money}\` <:HPemerald:831588273796415489>`) 
+       .setTitle('Lost')
+       .setDescription(`<:HPlost:833315238275317811> You gambled and sadly lost \n\`${money}\` <:HPemerald:831588273796415489>`) 
         message.channel.send(loseembed);
         await profileModel.findOneAndUpdate(
             {

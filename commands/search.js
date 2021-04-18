@@ -33,6 +33,12 @@ module.exports = {
 
     const RANDOM_NUMBER = Math.floor(Math.random() * (200 - 100 + 1)) + 100;
 
+    const sleepy = new Discord.MessageEmbed()
+        .setAuthor(message.author.tag, message.author.avatarURL())
+        .setColor("#30d56b")
+        .setTitle(`Search`)
+        .setDescription(`You did not search anything...`)
+
     const FILTER = (m) => {
       return chosenLocations.some((answer) => answer.toLowerCase() === m.content.toLowerCase()) && m.author.id === message.author.id;
     };
@@ -62,13 +68,13 @@ module.exports = {
 
     COLLECTOR.on("end", (collected) => {
       if (collected.size == 0) {
-        return
+        return message.channel.send(sleepy)
       }
     });
     const SEARCHEMBED = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor("#30d56b'")
-    .setTitle('Where would you like to search? <:HPsearch:830534770420875275>')
+    .setTitle('Where would you like to search?')
     .setDescription(`\nType the location in this channel.\n\`${chosenLocations.join("` `")}\``)
 
     message.channel.send(SEARCHEMBED)
