@@ -1,7 +1,7 @@
 module.exports = {
     name: "say",
     permissions: ["MANAGE_MESSAGES"],
-    cooldown: 40,
+    cooldown: 10,
     description: "says something",
     async execute(client, message, args, Discord){ 
         const error = new Discord.MessageEmbed() 
