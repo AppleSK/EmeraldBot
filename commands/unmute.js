@@ -21,8 +21,8 @@ module.exports = {
         .setDescription(`You do not have the \n\`Member/Muted\` role created!`)   
         const target = message.mentions.users.first();
         if(target){
-            const mainRole = message.guild.roles.cache.find(role => role.name === '👤 Member 👤');
-            const muteRole = message.guild.roles.cache.find(role => role.name === '🔇 Muted 🔇');
+            const mainRole = message.guild.roles.cache.find(role => role.name === 'Member');
+            const muteRole = message.guild.roles.cache.find(role => role.name === 'Muted');
  
             const memberTarget= message.guild.members.cache.get(target.id);
 

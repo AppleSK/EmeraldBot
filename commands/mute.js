@@ -28,8 +28,8 @@ module.exports = {
         const target = message.mentions.users.first();
         if (target) {
  
-            const mainRole = message.guild.roles.cache.find(role => role.name === '👤 Member 👤');
-            const muteRole = message.guild.roles.cache.find(role => role.name === '🔇 Muted 🔇');
+            const mainRole = message.guild.roles.cache.find(role => role.name === 'Member');
+            const muteRole = message.guild.roles.cache.find(role => role.name === 'Muted');
  
             const memberTarget = message.guild.members.cache.get(target.id);
 
