@@ -5,6 +5,12 @@ module.exports = {
   cooldown: 10,
   description: "Adds emeralds to a member!",
   async execute(client, message, args, Discord, profileData) {
+    const notapple = new Discord.MessageEmbed() 
+    .setAuthor(message.author.tag, message.author.avatarURL())
+    .setColor('30d56b')
+    .setTitle('`Insufficient bot powers!`')
+    .setDescription('Only the bot creator can use this command!')
+  if(message.author.id === "555629040455909406"){
     const error = new Discord.MessageEmbed() 
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('30d56b')
@@ -46,5 +52,8 @@ module.exports = {
     } catch (err) {
       console.log(err);
     }
-  },
-}; 
+    } else{
+      message.channel.send(notapple)
+    }
+  }
+  }
