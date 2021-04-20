@@ -176,7 +176,7 @@ description: "Gamble for some emeralds! 50/50 chance",
       .setAuthor(message.author.tag, message.author.avatarURL())
       .setColor('30d56b')
       .setTitle('Robbed')
-      .setDescription(`<:HPstole:833315238685311006 Someone took some of your emeralds and ran away! You lost \n\`${reward6}\` <:HPemerald:831588273796415489>`) 
+      .setDescription(`<:HPstole:833315238685311006> Someone took some of your emeralds and ran away! You lost \n\`${reward6}\` <:HPemerald:831588273796415489>`) 
        message.channel.send(rewardembed6);
        await profileModel.findOneAndUpdate(
            {
