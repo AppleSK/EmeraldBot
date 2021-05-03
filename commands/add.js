@@ -48,6 +48,8 @@ module.exports = {
         .setColor('30d56b')
         .setTitle('Add')
         .setDescription(`Sucessfully added \n\`${amount}\` <:HPemerald:831588273796415489>`) 
+        .setTimestamp()
+
       return message.channel.send(ADDEM);
     } catch (err) {
       console.log(err);

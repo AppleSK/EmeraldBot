@@ -23,7 +23,9 @@ module.exports = {
       .setAuthor(message.author.tag, message.author.avatarURL())
       .setColor('30d56b')
       .setTitle('Hourly')
-      .setDescription(`\n\`${randomNumber}\` <:HPemerald:831588273796415489> was your hourly reward. Come back in an hour to claim it again.`) 
+      .setDescription(`\n\`${randomNumber}\` <:HPemerald:831588273796415489> was your hourly reward. Come back in an hour to claim it again.`)
+      .setTimestamp()
+       
       return message.channel.send(HOUREMBED);
     }
   }

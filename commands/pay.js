@@ -52,6 +52,7 @@ async execute(client, message, args, Discord, profileData) {
   .setColor("30d56b")
   .setTitle('Pay')
   .setDescription(`You paid \n\`${amount}\` <:HPemerald:831588273796415489> to \n\`${user}\``) 
+  .setTimestamp()
   
   message.channel.send(payconfirm)
 

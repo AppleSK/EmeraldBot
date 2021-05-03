@@ -14,6 +14,7 @@ module.exports = {
         .setColor('30d56b')
         .setTitle('Kick')
         .setDescription('User has been kicked successfully!') 
+        .setTimestamp()
      const member = message.mentions.users.first();
         if(member){
             const memberTarger = message.guild.members.cache.get(member.id);

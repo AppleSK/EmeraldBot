@@ -15,6 +15,7 @@ module.exports = {
         .setColor('30d56b')
         .setTitle('Mute')
         .setDescription(`User got sucessfully muted!`)
+        .setTimestamp()
         const norole = new Discord.MessageEmbed() 
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('30d56b')
@@ -25,6 +26,7 @@ module.exports = {
         .setColor('30d56b')
         .setTitle('Mute')
         .setDescription(`User got sucessfully muted for \n\`${args[1]}ms\`!`)   
+        .setTimestamp()
         const target = message.mentions.users.first();
         if (target) {
  

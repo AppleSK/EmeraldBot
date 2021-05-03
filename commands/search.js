@@ -38,6 +38,7 @@ module.exports = {
         .setColor("#30d56b")
         .setTitle(`Search`)
         .setDescription(`You did not search anything...`)
+        .setTimestamp()
 
     const FILTER = (m) => {
       return chosenLocations.some((answer) => answer.toLowerCase() === m.content.toLowerCase()) && m.author.id === message.author.id;
@@ -51,6 +52,7 @@ module.exports = {
         .setColor("#30d56b")
         .setTitle(`Search`)
         .setDescription(`You found \n\`${RANDOM_NUMBER.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}\` <:HPemerald:831588273796415489>`)
+        .setTimestamp()
 
       await PROFILE_MODEL.findOneAndUpdate(
         {

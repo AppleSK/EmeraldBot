@@ -20,6 +20,7 @@ async execute(client, message, args, Discord){
     .setColor('30d56b')
     .setTitle('Slowmode')
     .setDescription(`Sucessfully set to \n\`${args[0]}ms\`!`) 
+    .setTimestamp()
 
         channel.setRateLimitPerUser(args[0])
         message.channel.send(SLOWMODEEMBED)

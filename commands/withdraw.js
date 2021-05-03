@@ -42,7 +42,8 @@ const negativeerror = new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('30d56b')
         .setTitle('Withdraw')
-        .setDescription(`You withdrew \n\`${amount}\` <:HPemerald:831588273796415489> into your wallet!`)  
+        .setDescription(`You withdrew \n\`${amount}\` <:HPemerald:831588273796415489> into your wallet!`) 
+        .setTimestamp() 
 
       return message.channel.send(WITHDRAWEMBED);
     } catch (err) {

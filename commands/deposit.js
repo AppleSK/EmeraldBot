@@ -40,7 +40,8 @@ module.exports = {
       .setAuthor(message.author.tag, message.author.avatarURL())
       .setColor('30d56b')
       .setTitle('Deposit')
-      .setDescription(`You deposited \n\`${amount}\` <:HPemerald:831588273796415489> into your bank!`)   
+      .setDescription(`You deposited \n\`${amount}\` <:HPemerald:831588273796415489> into your bank!`) 
+      .setTimestamp()
 
       return message.channel.send(DEPOSITEMBED);
     } catch (err) {

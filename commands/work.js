@@ -19,6 +19,8 @@ async execute(client, message, args, Discord, profileData) {
         .setTitle('Work')
         .setDescription(`You worked as \`${replies[result]}\` and earned \n\`${amount}\` <:HPemerald:831588273796415489>`)
         .setColor("30d56b")
+        .setTimestamp()
+        
         message.channel.send(embed1)
         
         await profileModel.findOneAndUpdate(

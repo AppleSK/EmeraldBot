@@ -33,6 +33,7 @@ module.exports = {
       .setTitle('Arrested')
       .setDescription('`You commited a crime and got arrested! You had to pay \n\`300\` <:HPemerald:831588273796415489>`')
       .setColor("30d56b")
+      .setTimestamp()
           
       message.channel.send(jailem);
          
@@ -54,6 +55,8 @@ module.exports = {
       .setTitle(`Crime`)
       .setDescription(`You commited a crime! You stole \n\`${random}\` <:HPemerald:831588273796415489>`)
       .setColor("30d56b")
+      .setTimestamp()
+
       await profileModel.findOneAndUpdate(
         {
           userID: user.id,

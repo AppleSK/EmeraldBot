@@ -14,6 +14,7 @@ module.exports = {
         .setColor('30d56b')
         .setTitle('Unmute')
         .setDescription(`User got sucessfully unmuted!`) 
+        .setTimestamp()
         const norole = new Discord.MessageEmbed() 
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('30d56b')

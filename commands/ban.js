@@ -14,6 +14,8 @@ module.exports = {
         .setColor('30d56b')
         .setTitle('Ban')
         .setDescription('User has been banned successfully!') 
+        .setTimestamp()
+
      const member = message.mentions.users.first();
         if(member){
             const memberTarger = message.guild.members.cache.get(member.id);
