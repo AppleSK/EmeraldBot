@@ -31,7 +31,7 @@ module.exports = {
         const jailem = new Discord.MessageEmbed()
         .setAuthor(message.author.tag, message.author.avatarURL())
       .setTitle('Arrested')
-      .setDescription('`You commited a crime and got arrested! You had to pay \n\`300\` <:HPemerald:831588273796415489>`')
+      .setDescription('`You commited a crime and got arrested! You had to pay **300**<a:EmeraldbotCurrency:838846098847039599>`')
       .setColor("30d56b")
       .setTimestamp()
           
@@ -53,7 +53,7 @@ module.exports = {
     const embed = new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL())
       .setTitle(`Crime`)
-      .setDescription(`You commited a crime! You stole \n\`${random}\` <:HPemerald:831588273796415489>`)
+      .setDescription(`You commited a crime! You stole **${random}**<a:EmeraldbotCurrency:838846098847039599>`)
       .setColor("30d56b")
       .setTimestamp()
 

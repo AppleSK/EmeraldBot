@@ -8,14 +8,15 @@ const target = message.mentions.users.first();
 const MENTIONERROR = new Discord.MessageEmbed() 
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('30d56b')
-        .setTitle('`Wrong usage!`')
-        .setDescription('This feature is not included yet! Please use the command like this `+bal`')
+        .setTitle('Unknown feature!')
+        .setDescription('This feature is not included yet! We are working on it.')
 const BALANCEEMBED = new Discord.MessageEmbed()
 .setAuthor(message.author.tag, message.author.avatarURL())
 .setColor("#30d56b'")
 .setTitle('Balance')
-.setDescription(`Wallet \n\`${profileData.bars}\`<:HPemerald:831588273796415489> 
-Bank \n\`${profileData.bank}\`<:HPemerald:831588273796415489>`)
+.setDescription(`Wallet • **${profileData.bars}**<a:EmeraldbotCurrency:838846098847039599> 
+Bank • **${profileData.bank}**<a:EmeraldbotCurrency:838846098847039599>`)
+.setTimestamp()
 if(!target) {
 message.channel.send(BALANCEEMBED)}
 else message.channel.send(MENTIONERROR)

@@ -7,7 +7,7 @@ module.exports = {
         const error = new Discord.MessageEmbed() 
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('30d56b')
-        .setTitle('`Wrong usage!`')
+        .setTitle('Wrong usage!')
         .setDescription('Please use the command like this `+poll <content>`') 
         if(!args[0]) return message.channel.send(error);
 

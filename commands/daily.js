@@ -23,7 +23,7 @@ module.exports = {
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('30d56b')
         .setTitle('Daily')
-        .setDescription(`\n\`${randomNumber}\` <:HPemerald:831588273796415489> was your daily reward. Come back tommorow to claim it again.`) 
+        .setDescription(`You got **${randomNumber}**<a:EmeraldbotCurrency:838846098847039599> from your daily reward. Come back tommorow to claim it again.`)
         .setTimestamp()
 
         return message.channel.send(DAILYEMBED);

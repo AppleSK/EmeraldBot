@@ -8,7 +8,7 @@ module.exports = {
     const commanderror = new Discord.MessageEmbed() 
     .setAuthor(message.author.tag, message.author.avatarURL())  
     .setColor('#30d56b')
-    .setTitle('`Wrong usage!`')
+    .setTitle('Wrong usage!')
     .setDescription('Please use the command like this `+8ball <question>`') 
     if (!args[0]) return message.channel.send(commanderror); // return if no question is commenced
     const replies = ['Yes.', 'No.', 'Never.', 'Definitely.', 'Ask again later.', 'Probably.', 'A hundred percent!', 'That is a tough question, I would say yes.', , 'That is a tough question, I would say no.', 'I have no idea, here, take some <:HPemerald:831588273796415489>', 'Oh yeah.', 'Definetly not!', 'Well yes, but actually no.', 'Very doubtful.', 'Without a doubt.', 'Better not tell you now.']; // random responses
@@ -17,9 +17,10 @@ module.exports = {
     // check permissions for embed
       const embed = new Discord.MessageEmbed() // create embed 
       .setAuthor(message.author.tag, message.author.avatarURL())  
-        .setTitle('`🎱 says...`')
-        .setColor('30d56b').addField(`\n\`Question\``, question)
-        .addField(`\n\`Answer\``, replies[result])
+        .setColor('30d56b').addField(`**Question**`, question)
+        .addField(`**Answer**`, replies[result])
+        .setTitle(`The ball responds...`)
+        .setTimestamp()
       await message.channel.send(embed); // send embed message
     }
   }

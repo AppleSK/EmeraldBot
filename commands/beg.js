@@ -33,7 +33,7 @@ description: "Beg for emeralds",
       .setAuthor(message.author.tag, message.author.avatarURL())
       .setColor('#30d56b')
       .setTitle('Beg')
-      .setDescription(`You begged and a rich person gave you \n\`${boostedrandomNumber}\` <:HPemerald:831588273796415489>`)
+      .setDescription(`You begged and a rich person gave you **${boostedrandomNumber}**<a:EmeraldbotCurrency:838846098847039599>`)
       .setTimestamp()
 
         return message.channel.send(boostedembed); 
@@ -52,7 +52,7 @@ description: "Beg for emeralds",
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('#30d56b')
         .setTitle('Beat up')
-        .setDescription(`You begged and got beaten up! You lost \n\`${beatupNumber}\` <:HPemerald:831588273796415489>`)
+        .setDescription(`You begged and got beaten up! You lost **${beatupNumber}**<a:EmeraldbotCurrency:838846098847039599>`)
         .setTimestamp()
 
           return message.channel.send(beatupembed);  
@@ -71,7 +71,7 @@ description: "Beg for emeralds",
       .setAuthor(message.author.tag, message.author.avatarURL())
       .setColor('#30d56b')
       .setTitle('Beg')
-      .setDescription(`You begged and received \n\`${randomNumber}\` <:HPemerald:831588273796415489>`)
+      .setDescription(`You begged and received **${randomNumber}**<a:EmeraldbotCurrency:838846098847039599>`)
       .setTimestamp()
 
       return message.channel.send(error)

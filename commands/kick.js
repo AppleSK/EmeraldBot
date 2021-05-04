@@ -7,15 +7,16 @@ module.exports = {
         const error = new Discord.MessageEmbed() 
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('30d56b')
-        .setTitle('`Wrong usage!`')
+        .setTitle('Wrong usage!')
         .setDescription('Please use the command like this `+kick <user>`')  
-        const success = new Discord.MessageEmbed() 
+        
+     const member = message.mentions.users.first();
+     const success = new Discord.MessageEmbed() 
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('30d56b')
         .setTitle('Kick')
-        .setDescription('User has been kicked successfully!') 
+        .setDescription(`${member} has been kicked successfully!`) 
         .setTimestamp()
-     const member = message.mentions.users.first();
         if(member){
             const memberTarger = message.guild.members.cache.get(member.id);
             memberTarger.kick();

@@ -8,18 +8,18 @@ module.exports = {
     const notapple = new Discord.MessageEmbed() 
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor('30d56b')
-    .setTitle('`Insufficient bot powers!`')
+    .setTitle('Insufficient bot powers!')
     .setDescription('Only the bot creator can use this command!')
   if(message.author.id === "555629040455909406"){
     const error = new Discord.MessageEmbed() 
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('30d56b')
-        .setTitle('`Wrong usage!`')
+        .setTitle('Wrong usage!')
         .setDescription('Please use the command like this `+add <user> <amount>`')
         const negativeerror = new Discord.MessageEmbed() 
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('30d56b')
-        .setTitle('`Cannot add negative numbers or zero!`')
+        .setTitle('Cannot add negative numbers or zero!')
         .setDescription('Please use a positive number to add!') 
     if (!args.length) return message.channel.send(error);
     const amount = args[1];
@@ -47,7 +47,7 @@ module.exports = {
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('30d56b')
         .setTitle('Add')
-        .setDescription(`Sucessfully added \n\`${amount}\` <:HPemerald:831588273796415489>`) 
+        .setDescription(`Sucessfully added **${amount}**<a:EmeraldbotCurrency:838846098847039599> to ${target}`) 
         .setTimestamp()
 
       return message.channel.send(ADDEM);

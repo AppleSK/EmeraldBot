@@ -7,7 +7,7 @@ async execute(client, message, args, Discord){
     const error = new Discord.MessageEmbed() 
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor('30d56b')
-    .setTitle('`Wrong usage!`')
+    .setTitle('Wrong usage!')
     .setDescription('Please use the command like this `+slowmode <time-in ms>`')
     if (!args[0]) return message.channel.send(error);
     if(isNaN(args[0])) return message.channel.send(error);
@@ -19,7 +19,7 @@ async execute(client, message, args, Discord){
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor('30d56b')
     .setTitle('Slowmode')
-    .setDescription(`Sucessfully set to \n\`${args[0]}ms\`!`) 
+    .setDescription(`Sucessfully set to **${args[0]}ms!**`) 
     .setTimestamp()
 
         channel.setRateLimitPerUser(args[0])

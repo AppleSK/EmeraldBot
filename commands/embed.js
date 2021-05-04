@@ -13,13 +13,13 @@ module.exports = {
         const error = new Discord.MessageEmbed() 
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('30d56b')
-        .setTitle('`Wrong usage!`')
+        .setTitle('Wrong usage!')
         .setDescription('Please use the command like this `+embed <title-one word> <color-hex or caps> <description>`') 
 
         if(!title) return message.channel.send(error) // ! means no, so if there's no title, return and send the error embed
         if(!color) return message.channel.send(error)
         if(!description) return message.channel.send(error)
-
+        
 
         const embed = new Discord.MessageEmbed()
         .setTitle(`${title}`)

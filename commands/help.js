@@ -7,49 +7,49 @@ module.exports = {
     const commanderror = new Discord.MessageEmbed() 
     .setAuthor(message.author.tag, message.author.avatarURL())  
     .setColor('#30d56b')
-    .setTitle('`Unknown command!`')
+    .setTitle('Unknown command!')
     .setDescription('Please use the +help command to view valid commands.') 
     const balhelp = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor('#30d56b')
-    .setTitle('`bal command`')
+    .setTitle('Balance command')
     .addFields(
-    {name: 'Description', value: 'Check your balance in your wallet and bank by using this.'},
+    {name: 'Description', value: 'Check the balance in your wallet and bank by using this.'},
     {name: 'Usage', value: '`+bal`'})
     const beghelp = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor('#30d56b')
-    .setTitle('`beg command`')
+    .setTitle('Beg command')
     .addFields(
-    {name: 'Description', value: 'Beg for some <:HPemerald:831588273796415489> and hope you will get some.'},
+    {name: 'Description', value: 'Beg for some<a:EmeraldbotCurrency:838846098847039599> and hope you will get some.'},
     {name: 'Usage', value: '`+beg`'}) 
     const withdrawhelp = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor('#30d56b')
-    .setTitle('`withdraw command`')
+    .setTitle('Withdraw command')
     .addFields(
-    {name: 'Description', value: 'Withdraw <:HPemerald:831588273796415489> from your bank into your wallet.'},
+    {name: 'Description', value: 'Withdraw<a:EmeraldbotCurrency:838846098847039599> from your bank into your wallet.'},
     {name: 'Usage', value: '`+withdraw <amount>`'},
     {name: 'Example', value: '`+withdraw 800`'})
     const deposithelp = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor('#30d56b')
-    .setTitle('`deposit command`')
+    .setTitle('Deposit command')
     .addFields(
-    {name: 'Description', value: 'Deposit <:HPemerald:831588273796415489> from your wallet into your bank.'},
+    {name: 'Description', value: 'Deposit<a:EmeraldbotCurrency:838846098847039599> from your wallet into your bank.'},
     {name: 'Usage', value: '`+deposit <amount>`'},
     {name: 'Example', value: '`+deposit 800`'}) 
     const searchhelp = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor('#30d56b')
-    .setTitle('`search command`')
+    .setTitle('Search command')
     .addFields(
-    {name: 'Description', value: 'Search a random location and get <:HPemerald:831588273796415489>'},
+    {name: 'Description', value: 'Search a random location and get<a:EmeraldbotCurrency:838846098847039599>'},
     {name: 'Usage', value: '`+search`'})
     const iconhelp = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor('#30d56b')
-    .setTitle('`icon command`')
+    .setTitle('Icon command')
     .addFields(
     {name: 'Description', value: 'Get the profile picture of a user.'},
     {name: 'Usage', value: '`+icon <user>`'},
@@ -57,80 +57,80 @@ module.exports = {
     const dailyhelp = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor('#30d56b')
-    .setTitle('`daily command`')
+    .setTitle('Daily command')
     .addFields(
-    {name: 'Description', value: 'Get a daily reward of <:HPemerald:831588273796415489>'},
+    {name: 'Description', value: 'Get a daily reward of<a:EmeraldbotCurrency:838846098847039599>'},
     {name: 'Usage', value: '`+daily`'})
     const hourlyhelp = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor('#30d56b')
-    .setTitle('`hourly command`')
+    .setTitle('Hourly command')
     .addFields(
-    {name: 'Description', value: 'Get an hourly reward of <:HPemerald:831588273796415489>'},
+    {name: 'Description', value: 'Get an hourly reward of<a:EmeraldbotCurrency:838846098847039599>'},
     {name: 'Usage', value: '`+hourly`'}) 
     const crimehelp = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor('#30d56b')
-    .setTitle('`crime command`')
+    .setTitle('Crime command')
     .addFields(
     {name: 'Description', value: 'Commit a crime and you will either get away with it or get arrested!'},
     {name: 'Usage', value: '`+crime`'}) 
     const gamblehelp = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor('#30d56b')
-    .setTitle('`gamble command`')
+    .setTitle('Gamble command')
     .addFields(
-    {name: 'Description', value: 'Gamble with any amount of <:HPemerald:831588273796415489> and see how much you get!'},
+    {name: 'Description', value: 'Gamble with any amount of<a:EmeraldbotCurrency:838846098847039599> and see how much you get!'},
     {name: 'Usage', value: '`+gamble <amount>`'},
     {name: 'Example', value: '`+gamble 642`'})
     const workhelp = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor('#30d56b')
-    .setTitle('`work command`')
+    .setTitle('Work command')
     .addFields(
-    {name: 'Description', value: 'Go to work and get paid with some <:HPemerald:831588273796415489>'},
+    {name: 'Description', value: 'Go to work and get paid with some<a:EmeraldbotCurrency:838846098847039599>'},
     {name: 'Usage', value: '`+work`'})
     const payhelp = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor('#30d56b')
-    .setTitle('`pay command`')
+    .setTitle('Pay command')
     .addFields(
-    {name: 'Description', value: 'Pay a user!'},
+    {name: 'Description', value: 'Pay a user some<a:EmeraldbotCurrency:838846098847039599>!'},
     {name: 'Usage', value: '`+pay <user> <amount>`'},
     {name: 'Example', value: '`+pay @AppleSK#3293 1489`'})   
     const ballhelp = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor('#30d56b')
-    .setTitle('`8ball command`')
+    .setTitle('8ball command')
     .addFields(
-    {name: 'Description', value: 'Ask the 🎱 a question and it will give you an answer for a small fine!'},
+    {name: 'Description', value: 'Ask the 8-ball a question and it will give you an answer'},
     {name: 'Usage', value: '`+8ball <question>`'},
     {name: 'Example', value: '`+8ball Am I cute?`'})  
     const banhelp = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor('#30d56b')
-    .setTitle('`ban command`')
+    .setTitle('Ban command')
     .addFields(
     {name: 'Description', value: 'Ban a user from the server.'},
     {name: 'Usage', value: '`+ban <user>`'})
     const kickhelp = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor('#30d56b')
-    .setTitle('`kick command`')
+    .setTitle('Kick command')
     .addFields(
     {name: 'Description', value: 'Kick a user from the server.'},
     {name: 'Usage', value: '`+kick <user>`'})   
     const clearhelp = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor('#30d56b')
-    .setTitle('`clear command`')
+    .setTitle('Clear command')
     .addFields(
     {name: 'Description', value: 'Clear up to a hundred messages at once!'},
     {name: 'Usage', value: '`+clear <amount>`'})
     const embedhelp = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor('#30d56b')
-    .setTitle('`embed command`')
+    .setTitle('Embed command')
     .addFields(
     {name: 'Description', value: 'Create an embed.'},
     {name: 'Usage', value: '`+embed <title-one word> <color-hex or caps> <description>`'},
@@ -138,7 +138,7 @@ module.exports = {
     const mutehelp = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor('#30d56b')
-    .setTitle('`mute command`')
+    .setTitle('Mute command')
     .addFields(
     {name: 'Description', value: 'Mute a user!'},
     {name: 'Usage', value: '`+mute <user> <time-optional/in ms>`'},
@@ -146,28 +146,28 @@ module.exports = {
     const unmutehelp = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor('#30d56b')
-    .setTitle('`unmute command`')
+    .setTitle('Unmute command')
     .addFields(
     {name: 'Description', value: 'Unmute a user!'},
     {name: 'Usage', value: '`+unmute <user>`'}) 
     const pollhelp = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor('#30d56b')
-    .setTitle('`poll command`')
+    .setTitle('Poll command')
     .addFields(
     {name: 'Description', value: 'Create a poll for voting.'},
     {name: 'Usage', value: '`+poll <content>`'})
     const sayhelp = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor('#30d56b')
-    .setTitle('`say command`')
+    .setTitle('Say command')
     .addFields(
     {name: 'Description', value: 'Makes the bot say something!'},
     {name: 'Usage', value: '`+say <message>`'})
     const slowmodehelp = new Discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL())
     .setColor('#30d56b')
-    .setTitle('`slowmode command`')
+    .setTitle('Slowmode command')
     .addFields(
     {name: 'Description', value: 'Set the slowmode for a channel.'},
     {name: 'Usage', value: '`+slowmode <time-in ms>`'},
@@ -179,20 +179,20 @@ module.exports = {
     .setTitle('Help')
     .addFields(
     {name: 'Economy', value: 'Commands for the economy system!'},
-    {name: '`+bal`          `+beg`', value: '+help bal               \u200e+help beg'},
-    {name: '`+withdraw`          `+deposit`', value: '+help withdraw               \u200e+help deposit'},
-    {name: '`+daily`          `+hourly`', value: '+help daily               \u200e+help hourly'},
-    {name: '`+crime`          `+gamble`', value: '+help crime               \u200e+help gamble'},
-    {name: '`+work`          `+pay`', value: '+help work               \u200e+help pay'},
-    {name: '`+search`', value: '+help search'},
+    {name: '**+bal**          **+beg**', value: '+help bal               \u200e+help beg'},
+    {name: '**+withdraw**          **+deposit**', value: '+help withdraw               \u200e+help deposit'},
+    {name: '**+daily**          **+hourly**', value: '+help daily               \u200e+help hourly'},
+    {name: '**+crime**          **+gamble**', value: '+help crime               \u200e+help gamble'},
+    {name: '**+work**          **+pay**', value: '+help work               \u200e+help pay'},
+    {name: '**+search**', value: '+help search'},
     {name: 'Moderation', value: 'Commands for moderation!'},
-    {name: '`+ban`          `+kick`', value: '+help ban               \u200e+help kick'},
-    {name: '`+clear`          `+embed`', value: '+help clear               \u200e+help embed'},
-    {name: '`+mute`          `+unmute`', value: '+help mute               \u200e+help unmute'},
-    {name: '`+poll`          `+slowmode`', value: '+help poll               \u200e+help slowmode'},
+    {name: '**+ban**          **+kick**', value: '+help ban               \u200e+help kick'},
+    {name: '**+clear**          **+embed**', value: '+help clear               \u200e+help embed'},
+    {name: '**+mute**          **+unmute**', value: '+help mute               \u200e+help unmute'},
+    {name: '**+poll**          **+slowmode**', value: '+help poll               \u200e+help slowmode'},
     {name: 'Fun', value: 'Commands that are just for fun!'},
-    {name: '`+8ball`          `+icon`', value: '+help 8ball               \u200e+help icon'},
-    {name: '`+say`', value: '+help say'})
+    {name: '**+8ball**          **+icon**', value: '+help 8ball               \u200e+help icon'},
+    {name: '**+say**', value: '+help say'})
     message.channel.send(helpEmbed)
     } else if(args[0] == 'bal') {
         message.channel.send(balhelp)
