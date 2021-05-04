@@ -192,7 +192,8 @@ module.exports = {
     {name: '**+poll**          **+slowmode**', value: '+help poll               \u200e+help slowmode'},
     {name: 'Fun', value: 'Commands that are just for fun!'},
     {name: '**+8ball**          **+icon**', value: '+help 8ball               \u200e+help icon'},
-    {name: '**+say**', value: '+help say'})
+    {name: '**+say**', value: '+help say'},
+    {name: 'Support', value: `If you need help feel free to join the official Emeraldbot Support server https://discord.gg/c3cxbNyDa8 !`})
     message.channel.send(helpEmbed)
     } else if(args[0] == 'bal') {
         message.channel.send(balhelp)
