@@ -4,6 +4,7 @@ module.exports = {
     cooldown: 7,
     description: "This unmutes a member!",
     execute(client, message, args, Discord){ 
+        const target = message.mentions.users.first();
         const error = new Discord.MessageEmbed() 
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('30d56b')
@@ -15,7 +16,6 @@ module.exports = {
         .setTitle('Unmute')
         .setDescription(`${target} got sucessfully unmuted!`) 
         .setTimestamp()
-        const target = message.mentions.users.first();
         const norole = new Discord.MessageEmbed() 
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor('30d56b')

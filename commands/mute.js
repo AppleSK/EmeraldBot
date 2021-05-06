@@ -37,6 +37,7 @@ module.exports = {
 
             if(!mainRole) return message.channel.send(norole);
             if(!muteRole) return message.channel.send(norole);
+            if(isNaN(args[1])) return message.channel.send(error);
  
             if (!args[1]) {
                 memberTarget.roles.remove(mainRole.id);
